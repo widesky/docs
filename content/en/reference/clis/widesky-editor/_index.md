@@ -2,7 +2,7 @@
 title: "widesky-editor"
 weight: 1
 type: docs
-draft: true
+draft: false
 description: >
   widesky-editor
 ---
