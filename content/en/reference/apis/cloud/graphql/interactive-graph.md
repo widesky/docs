@@ -73,7 +73,7 @@ description: Representaion of the WideSky GraphQL API as an interactive graph
     <div id="voyager">Loading...</div>
     <script>
         function introspectionProvider(introspectionQuery) {
-            return $.getJSON('../widesky-graphql-introspection.json', function(responseBody) {
+            return $.getJSON('/docs/files/widesky-graphql-introspection.json', function(responseBody) {
                 return responseBody;
             });
         }
