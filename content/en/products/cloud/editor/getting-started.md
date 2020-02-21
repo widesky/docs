@@ -79,7 +79,7 @@ INFO:root:Found 3
 ```
 The file test entities should contain similar contents. Notice that WideSky has created UUIDs for each entity.
 
-![Test entities](/images/editor-test-entities.png)
+![Test entities](/docs/images/editor-test-entities.png)
 
 
 ### Step 5: Edit an entity
@@ -88,7 +88,7 @@ Add a new tag `geoCity` to the `site` entity.
 
 1. In your spreadsheet application or text editor, insert a new column with the heading `geoCity`.
 2. Add a city name e.g. `s:Brisbane` to the row with the `site` entity, and save the CSV file.
-  ![Add geoAddr to the site entity](/images/editor-add-geoAddr.png)
+  ![Add geoAddr to the site entity](/docs/images/editor-add-geoAddr.png)
 3. Use WideSky Editor to read the file and update each entity:
 
 ```bash
@@ -151,7 +151,7 @@ tags:
 
 1. To delete the entities add `m:` to all three entities:
 
-   ![Add m: in the delete column to delete entities](/images/editor-delete-entities.png)
+   ![Add m: in the delete column to delete entities](/docs/images/editor-delete-entities.png)
 
 2. Load the file again with the command:
 

@@ -11,7 +11,7 @@ WideSky uses GraphQL to provide a powerful interface to construct data insights.
 
 You can access the WideSky query editor when you are in the edit mode of a Panel. By default, when you create a new panel a basic query will be pre-filled.
 
-![An example WideSky query](/images/widesky-query-new.gif)
+![An example WideSky query](/docs/images/widesky-query-new.gif)
 
 
 ## Core Concepts
@@ -28,7 +28,7 @@ To add a field, click on an existing field to access the pop-up menu under 'fiel
 {{% alert title="Tip"  color="primary" %}} Hover over the info icon in the fields menu to see a documentation snippet.
 {{% /alert %}}
 
-![Select fields to form a query](/images/widesky-query-fields.gif)
+![Select fields to form a query](/docs/images/widesky-query-fields.gif)
 
 #### Changing fields
 To alter a field, click on an existing field and drill down to 'change to' to see a list of available fields.
@@ -43,20 +43,20 @@ To remove a field, click on an existing field select 'remove'. All arguments and
 ### Arguments
 Each field can have one or more arguments that are used to alter the behavior of a field. Mandatory arguments that require you to select a value appear in-line with the field. Non-mandatory arguments will initially be collapsed under 'options'. Click on the options arrow to expand them and set their values. Arguments with default values will be shown in gray. An argument can also have nested arguments.
 
-![Set arguments to refine your query](/images/widesky-query-arguments.gif)
+![Set arguments to refine your query](/docs/images/widesky-query-arguments.gif)
 
 ### Time range
 
 The start and end times of the dashboard are exposed as the variables `$to` and `$from`. To ensure the time range of the query matches the Grafana dashboard, these variables are automatically entered into the `relativeRange` arguments of the `history` field when it's added.
 
-![Time rage arguments](/images/widesky-query-timerange.png)
+![Time rage arguments](/docs/images/widesky-query-timerange.png)
 
 
 ## Haystack filter auto-complete
 
 The query editor has auto-complete functionality to assist construction of the [Project Haystack filter](https://project-haystack.org/doc/Filters) argument. It will offer contextually aware choices after each edit. This allows you to query for tags in your asset model without prior knowledge of what's available.
 
-![Haystack filter auto-complete](/images/widesky-query-filter.gif)
+![Haystack filter auto-complete](/docs/images/widesky-query-filter.gif)
 
 To create a filter, click the `select a tag` button to the right of the `filter` field and select a tag. Depending on the selected [tag kind](https://project-haystack.org/doc/TagModel#tagKinds) the editor will suggest choices for the next part of the filter.
 
@@ -119,7 +119,7 @@ You can specify what field(s) to alias by specifying the path of the field relat
 ##### Path example
 Given the query:
 
-![Alias example](/images/widesky-query-alias.png)
+![Alias example](/docs/images/widesky-query-alias.png)
 
 Example alias configurations:
 
@@ -137,7 +137,7 @@ When `Format as` is set to table, the editor presents a column selector. Click o
 
 All field values are shown using a relative path e.g. `haystack.search.count`. Subsequent columns can be flattened to a parent columns if the sub-field has multiple values. You can flatten fields with more than one result to a parent field, by selecting the parent field in `flatten with`.
 
-![Table Builder](/images/widesky-query-table.gif)
+![Table Builder](/docs/images/widesky-query-table.gif)
 
 {{% alert title="Tip"  color="primary" %}} When building a table panel, add a column style under the Visualization tab to override the column name or change formatting.
 {{% /alert %}}
