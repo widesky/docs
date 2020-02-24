@@ -6,10 +6,14 @@ type: docs
 description: >
   How to use WideSky in Grafana.
 ---
+WideSky uses GraphQL to provide a powerful interface to construct data insights. The query editor provides a friendly interface that allows you to build a query without typing.
 
-WideSky uses GraphQL to provide a powerful interface to construct data insights. The the query editor provides a friendly interface that allows you to build a GraphQL query without typing.
+![An example WideSky query](/docs/images/widesky-query.gif)
 
-You can access the WideSky query editor when you are in the edit mode of a Panel. By default, when you create a new panel a basic query will be pre-filled.
+
+## Accessing the editor
+
+You can access the WideSky query editor when you are in the edit mode of a Panel. By default, when you create a new panel, a basic query is pre-filled.
 
 ![An example WideSky query](/docs/images/widesky-query-new.gif)
 
@@ -19,7 +23,7 @@ You can access the WideSky query editor when you are in the edit mode of a Panel
 Below are some core concepts that are helpful to know when building a query,
 
 ### Fields
-A WideSky query is constructed by asking for specific fields. To construct a query for Grafana to plot, you need to add fields that will return with data for the panel to display. All fields appear on the left of the editor colored <span style="color:blue">*blue*</span>.
+A WideSky query is constructed by asking for specific fields. To construct a query for Grafana to display, you need to add fields that return with data for the panel to display. All fields appear on the left of the editor colored <span style="color:blue">*blue*</span>.
 
 #### Adding fields
 
@@ -33,15 +37,15 @@ To add a field, click on an existing field to access the pop-up menu under 'fiel
 #### Changing fields
 To alter a field, click on an existing field and drill down to 'change to' to see a list of available fields.
 
-{{% alert title="Warning"  color="warning" %}} When changing a fields, arguments and sub-fields that also exist on the replacement field will remain. All other incompatible arguments and sub-fields will be removed.
+{{% alert title="Warning"  color="warning" %}} When changing fields, arguments and sub-fields that also exist on the replacement field remain in your query. All other incompatible arguments and sub-fields are removed.
 {{% /alert %}}
 
 #### Removing fields
-To remove a field, click on an existing field select 'remove'. All arguments and sub-fields will also be deleted.
+To remove a field, click on an existing field and select 'remove'. All arguments and sub-fields are deleted.
 
 
 ### Arguments
-Each field can have one or more arguments that are used to alter the behavior of a field. Mandatory arguments that require you to select a value appear in-line with the field. Non-mandatory arguments will initially be collapsed under 'options'. Click on the options arrow to expand them and set their values. Arguments with default values will be shown in gray. An argument can also have nested arguments.
+Each field can have one or more arguments which alter the behaviour of a field. Mandatory arguments require you to select a value appear in-line with the field. Non-mandatory arguments are initially collapsed under 'options'. Click on the options arrow to expand them and set their values. Arguments with a default value appear as  are shown in grey. An argument can also have nested arguments which are also initially collapsed.
 
 ![Set arguments to refine your query](/docs/images/widesky-query-arguments.gif)
 

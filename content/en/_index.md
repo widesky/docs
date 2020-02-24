@@ -1,9 +1,11 @@
 ---
 title: "WideSky Documentation"
 linkTitle: "Docs Home"
+Description: "WideSky Documentation"
 weight: 1
 type: docs
 breadcrumb_disable: true
+hide_feedback: true
 ---
 
 {{% pageinfo color="primary" %}}
