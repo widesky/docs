@@ -7,11 +7,5 @@ description: >
 menu:
   main:
     weight: 2
+hide_feedback: true
 ---
-
-
-
-
-
-
-
