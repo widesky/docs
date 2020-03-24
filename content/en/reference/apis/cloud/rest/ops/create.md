@@ -8,7 +8,7 @@ description: >
 ---
 {{% alert title="Warning"  color="warning" %}} * The creation of entities must be done methodically to ensure the relationships are formed correctly. To ensure this occurs, create parent entities in a separate request before attempting to create the child entities.
 * The create operation is not transactional. That is, if the create operation fails, then those entities which were successfully inserted within the same call will persist in the database and won't be rolled back. This will be addressed in a future release.
-* Avoid using the dot '.' in dis tag values. This can interfere with the semantic modeling, causing undesirable behavior.
+* Avoid using the dot (`.`) in `dis` tag values. This can interfere with the semantic modeling, causing undesirable behavior.
 {{% /alert %}}
 
 ---
