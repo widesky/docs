@@ -14,6 +14,14 @@ You can run Editor on macOS, Windows, and 64-bit Linux.
 + Windows systems will also need the Windows Subsystem for Linux (WSL). See the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10" target="_blank" rel="noopener">Windows Subsystem for Linux Installation Guide</a>
 
 
+
+{{% alert title="Tip"  color="primary" %}}
+For Windows users:
++ Use [this guide](https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly) to assist your installation.
++ When dumping and loading files from your system, the files locations need to be accessable by docker, e.g. your working path needs to start with `\c` or `\d` see [this big](https://github.com/docker/for-win/issues/2151) for details.
+{{% /alert %}}
+
+
 ## Installation
 
 To install editor run this command:
@@ -85,6 +93,6 @@ $ docker pull wideskycloud/editor
 To uninstall WideSky Editor:
 
 ```bash
-$ sudo rm /usr/local/bin/docker-compose
+$ sudo rm /usr/local/bin/widesky-editor
 $ docker image rm wideskycloud/editor
 ```

@@ -10,8 +10,6 @@ description: >
 ## Overview
 The [WideSky Cloud](https://widesky.cloud/products/widesky-cloud) analytics and visualization tool is based on the open-source Grafana platform. This tool provides analytics, dashboards, charts and graphs and allows and end-users to create sophisticated monitoring dashboards and templates using an interactive query builder.
 
-This tool provides analytics, dashboards, charts and graphs and allows and end-users to create sophisticated monitoring dashboards and templates using an interactive query builder.
-
 Using this tool, you can:
 + Empower end-users with self-service analytics
 + Create sophisticated monitoring dashboards and templates
@@ -24,15 +22,14 @@ Using this tool, you can:
 ## WideSky data plugin
 
 We've extended Grafana to included a feature-rich data plugin for WideSky using the [GraphQL API](../../../reference/apis/cloud/graphql/). This plug-in includes a variety of features to assist with the analytics construction, including:
-+ An interactive query editor with:
-  + Automatic Project Haystack contextually aware filter suggestions
-  + Support for nested GraphQL queries for complex data transformations and analytics
-  + GraphQL schema introspection and helper text to provide contextually aware field choices
++ An interactive query builder that supports:
+  + Contextually aware Project Haystack filter suggestions
+  + GraphQL schema introspection and helper text to provide contextually aware choices
 + Support for both time series and table panel types
 + Support for Grafana templates
 + Real-time control buttons
 
-You will be issued with a URI and administrator level credentials. You can use the guides below to create your first WideSky dashboard.
+You will be issued with a URI and administrator level credentials. You can use the guides below to understnad how to user the plugin.
 
 {{% alert title="Note"  color="primary" %}} If you're new to Grafana, we recommend visiting their [getting started guide](https://grafana.com/docs/grafana/latest/guides/getting_started/) to get acquainted with Grafana basics.
 {{% /alert %}}
