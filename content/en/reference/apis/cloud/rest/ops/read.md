@@ -7,7 +7,7 @@ description: >
   Read a set of entity records either by id or by a filter.
 ---
 
-{{% alert title="Note"  color="primary" %}} Widesky has extended the standard Project-Haystack filter to allow tag value matching by regular expression. The pattern syntax for this feature is currently implemented to the Javascript's regular expression standard. Pattern options like '/i' - case insensitive are not currently supported.
+{{% alert title="Note"  color="primary" %}} Widesky has extended the standard Project-Haystack filter to allow tag value matching by regular expression. The pattern syntax for this feature is currently implemented to the JavaScript's regular expression standard.  Pattern flags like `/i` (case insensitive) are not currently supported.
 {{% /alert %}}
 
 ## Details
@@ -18,16 +18,16 @@ description: >
 
 **Request Data Params (by filter):** *A grid with a single row and following columns:*
 
-|Column|Value description|
-|------|-----------|
-|`filter`|Str encoding of a Project Haystack filter|
-|`limit`|Number which specifies maximum number of entities to return in response|
+|Column|Kind|Value description|
+|------|----|-----------|
+|`filter`|`Str`|Project Haysteck filter to match against desired entities|
+|`limit`|`Number`|Maximum number of matching entities to return in the response|
 
 **Request Data Params (by id):** *A grid with one or more rows with the following columns:*
 
-|Column|Value description|
-|------|-----------|
-|`id`|A human friendly display name for the entity|
+|Column|Kind|Value description|
+|------|----|-----------|
+|`id`|`Ref`|The UUID or fully qualified name of the entity.|
 
 
 **Response (by filter):** *A grid with a row for each entity read. If no matches were found this will be an empty grid with no rows.*
