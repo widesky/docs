@@ -173,4 +173,4 @@ INFO:root:Deleting IDs: ce344476-4afc-11ea-85d6-0242ac120003
 ```
 
 ## Where to go next
-+ Understand the yaml mode that provides more powerful commands
++ Understand the YAML mode that provides more powerful commands
