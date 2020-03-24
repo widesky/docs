@@ -8,7 +8,7 @@ Description: How to Authenticate via OAuth2
 
 Both WideSky Cloud GraphQL and REST APIs use JSON-based OAuth2 authentication. This section describes how to get a token for subsequent REST or GraphQL calls.
 
-You should have been issued with a `username` and `password` for your user account, along with a `clientId` and `clientSecret` for your client application. The clientSecret should be treated like a password and be stored securely.
+You should have been issued with a `username` and `password` for your user account, along with a `clientId` and `clientSecret` for your client application. The `clientSecret` should be treated like a password and be stored securely.
 
 ## Authentication Steps
 1. Send both the user's and client application's information to the `token` operation. This operation grants the client application an `accessToken` and `refreshToken`.
