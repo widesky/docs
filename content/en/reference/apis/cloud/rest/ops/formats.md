@@ -1,6 +1,6 @@
 ---
 title: "Formats"
-linkTitle: "foramts"
+linkTitle: "formats"
 weight: 3
 type: docs
 description: >
