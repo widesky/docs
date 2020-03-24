@@ -9,7 +9,7 @@ type: docs
 ## Overview
 The WideSky Cloud REST API exposes a range of functionality to query the asset model, read and write data, and issue commands. It's based on the REST architectural style, and in particular implements a superset of the  <a href="https://project-haystack.org/doc/Rest" target="_blank" rel="noopener">Project Haystack REST API Specification</a>.
 
-{{% alert title="Note"  color="primary" %}} Technically the Haystack REST API isn't strictly "RESTful" from a purist perspective - the ops design is more akin to a RPC model. But we use the term REST to distinguish the design from traditional WS-* web services that use XML, SOAP, etc.
+{{% alert title="Note"  color="primary" %}} Technically the Haystack REST API isn't strictly "RESTful" from a purist perspective - the ops design is more akin to a RPC model. But we use the term REST to distinguish the design from traditional WS-\* web services that use XML, SOAP, etc.
 {{% /alert %}}
 
 
