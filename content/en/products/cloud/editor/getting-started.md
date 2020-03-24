@@ -39,12 +39,12 @@ Use the `load` command and specify `--csv-in` to load in the new CSV file and cr
 
 ```bash
 $ widesky-editor \
---uri <URI> \
---user <USERNAME> \
---password "<PASSWORD>" \
---client-id "<CLIENT_ID>" \
---client-secret "<CLIENT_SECRET>" \
-load --csv-in testModel.csv
+        --uri <URI> \
+        --user <USERNAME> \
+        --password "<PASSWORD>" \
+        --client-id "<CLIENT_ID>" \
+        --client-secret "<CLIENT_SECRET>" \
+    load --csv-in testModel.csv
 ```
 
 You should see output similar to the following:
@@ -62,14 +62,14 @@ Use the `dump` command and use the `--filter` argument to specify the entities w
 
 ```bash
 $ widesky-editor --output testEntities.csv \
---csv \
---uri <URI> \
---user <USERNAME> \
---password "<PASSWORD>" \
---client-id "<CLIENT_ID>" \
---client-secret "<CLIENT_SECRET>" \
-dump \
---filter 'siteRef==@editorTestSite or id==@editorTestSite'
+        --csv \
+        --uri <URI> \
+        --user <USERNAME> \
+        --password "<PASSWORD>" \
+        --client-id "<CLIENT_ID>" \
+        --client-secret "<CLIENT_SECRET>" \
+    dump \
+        --filter 'siteRef==@editorTestSite or id==@editorTestSite'
 ```
 You should see the following response:
 
@@ -93,12 +93,12 @@ Add a new tag `geoCity` to the `site` entity.
 
 ```bash
 $ widesky-editor \
---uri <URI> \
---user <USERNAME> \
---password "<PASSWORD>" \
---client-id "<CLIENT_ID>" \
---client-secret "<CLIENT_SECRET>" \
-load --csv-in testEntities.csv
+        --uri <URI> \
+        --user <USERNAME> \
+        --password "<PASSWORD>" \
+        --client-id "<CLIENT_ID>" \
+        --client-secret "<CLIENT_SECRET>" \
+    load --csv-in testEntities.csv
 ```
     You should see the following response:
 ```bash
@@ -157,12 +157,12 @@ tags:
 
 ```bash
 $ widesky-editor \
---uri <URI> \
---user <USERNAME> \
---password "<PASSWORD>" \
---client-id "<CLIENT_ID>" \
---client-secret "<CLIENT_SECRET>" \
-load --csv-in testEntities.csv
+        --uri <URI> \
+        --user <USERNAME> \
+        --password "<PASSWORD>" \
+        --client-id "<CLIENT_ID>" \
+        --client-secret "<CLIENT_SECRET>" \
+    load --csv-in testEntities.csv
 ```
 You should see the following response:
 
