@@ -16,20 +16,20 @@ description: Queries basic information about the server.
 
 **Response:** *Single row grid with following columns:*
 
-|Column|Value Description|
-|------|-----------|
-|`haystackVersion`|Str version of REST implementation|
-|`tz`|Str of server's default timezone|
-|`serverName`|Str name of the server or project database|
-|`serverTime`|Current DateTime of server's clock|
-|`serverBootTime`|DateTime when server was booted up|
-|`productName`|Str name of the server software product|
-|`productUri`|Uri of the product's web site|
-|`productVersion`|Str version of the server software product|
-|`moduleName`|Module which implements Haystack server protocol if its a plug-in to the product|
-|`moduleVersion`|Str version of moduleName|
-|`vendorName`|Str name of the vendor|
-|`VendorURL`|URI of the Vendors website|
+|Column|Kind|Value Description|
+|------|----|-----------|
+|`haystackVersion`|`Str`|Version of REST implementation|
+|`tz`|`Str`|Server's default timezone|
+|`serverName`|`Str`|Name of the server or project database|
+|`serverTime`|`DateTime`|Current Date/Time of server's clock|
+|`serverBootTime`|`DateTime`|Date/Time when server was booted up|
+|`productName`|`Str`|Name of the server software product|
+|`productUri`|`Uri`|URL of the product's web site|
+|`productVersion`|`Str`|Version of the server software product|
+|`moduleName`|`Str`|Module which implements Haystack server protocol if its a plug-in to the product|
+|`moduleVersion`|`Str`|Version of module|
+|`vendorName`|`Str`|Name of the vendor|
+|`VendorURL`|`Uri`|URI of the Vendor's website|
 
 
 ---
