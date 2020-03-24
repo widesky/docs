@@ -17,10 +17,10 @@ description: >
 
 **Response:** *Single row grid with following columns:*
 
-|Column|Value Description|
-|------|-----------|
-|`name`|Str name of the operation in the URI namespace|
-|`summary`|Str short description of the operation|
+|Column|Kind|Value Description|
+|------|----|-----------|
+|`name`|`Str`|Name of the operation in the URI namespace|
+|`summary`|`Str`|Short description of the operation|
 
 ## Example
 
