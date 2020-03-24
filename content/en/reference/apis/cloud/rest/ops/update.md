@@ -7,7 +7,7 @@ description: >
   Modifying existing entity records. It allows you to add new tags, remove existing tags, and modify tag values.
 ---
 
-{{% alert title="Warning"  color="warning" %}} The create operation is not transactional. That is, if the create operation fails, then those entities which were successfully inserted within the same call will persist in the database and won't be rolled back. This will be addressed in a future release.
+{{% alert title="Warning"  color="warning" %}} The update operation is not transactional. That is, if the update operation fails, then those entities which were successfully mutated within the same call will retain the new values in the database and won't be rolled back. This will be addressed in a future release.
 {{% /alert %}}
 
 
