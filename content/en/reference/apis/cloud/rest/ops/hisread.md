@@ -50,7 +50,7 @@ with one of the following formats:
 
 **Response (single point):** *Grid with the following metadata fields:*
 
-|Column|Kind|Value Description|
+|Field|Kind|Value Description|
 |------|----|-----------|
 |`id`|`Ref`|ID of the point we just read|
 |`hisStart`|`DateTime`|Timestamp for range start in `point`'s timezone|
@@ -65,7 +65,7 @@ with one of the following formats:
 
 **Response (single point):** *Grid with the following metadata fields:*
 
-|Column|Kind|Value Description|
+|Field|Kind|Value Description|
 |------|----|-----------|
 |`hisStart`|`DateTime`|Timestamp for range start in `point`'s timezone|
 |`hisEnd`|`DateTime`|Timestamp for range end in `point`'s timezone|
