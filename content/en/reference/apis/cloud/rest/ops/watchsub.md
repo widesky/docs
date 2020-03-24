@@ -51,6 +51,15 @@ Only real-time `point`s (those bearing the `cur` tag) can be used with a watch, 
 |`watchId`|`Str`|The ID of the watch object created or updated by `watchSub`|
 |`lease`|`Number`|Duration of the lease with unit of time measurement (optional)|
 
+*…and one or more rows with the following columns:*
+
+|Column|Kind|Value Description|
+|------|----|-----------|
+|`id`|`Ref`|ID of a point in the watch list|
+|`curErr`|`Str`|(Optional) Error message detail for non-"OK" states, see [`curErr`](https://www.project-haystack.org/tag/curErr)|
+|`curStatus`|`Str`|Status of the point being watched, see [`curStatus`](https://www.project-haystack.org/tag/curStatus)|
+|`curVal`|See `kind` tag of `point`|Value last read from the point, if known|
+
 {{% alert title="Note"  color="info" %}}
 When appending to an existing watch, the `watchId` returned in the response may differ from that of the request.  The client should update the `watchId` it has stored and use the new `watchId` on subsequent requests.
 {{% /alert %}}
