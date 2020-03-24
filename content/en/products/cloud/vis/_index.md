@@ -8,7 +8,7 @@ description: >
 ---
 
 ## Overview
-The [WideSky Cloud](https://widesky.cloud/products/widesky-cloud) analytics and visualization tool is based on the open-source Grafana platform. This tool provides analytics, dashboards, charts and graphs and allows and end-users to create sophisticated monitoring dashboards and templates using an interactive query builder.
+The [WideSky Cloud](https://widesky.cloud/products/widesky-cloud) analytics and visualization tool is based on the open-source [Grafana](https://www.grafana.com) platform. This tool provides analytics, dashboards, charts and graphs and allows and end-users to create sophisticated monitoring dashboards and templates using an interactive query builder.
 
 Using this tool, you can:
 + Empower end-users with self-service analytics
@@ -19,7 +19,7 @@ Using this tool, you can:
 + View and administer all of the  time-series data and asset models
 
 
-## WideSky data plugin
+## WideSky data plugin for Grafana
 
 We've extended Grafana to included a feature-rich data plugin for WideSky using the [GraphQL API](../../../reference/apis/cloud/graphql/). This plug-in includes a variety of features to assist with the analytics construction, including:
 + An interactive query builder that supports:
