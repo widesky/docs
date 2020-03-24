@@ -20,7 +20,7 @@ description: >
 
 **Request Data Params:** *A grid of records containing all entity records to be updated on the server.*
 
-{{% alert title="Note"  color="primary" %}} * To remove existing tags, set the tag value to "x:".
+{{% alert title="Note"  color="primary" %}} * To remove existing tags, set the tag value to `x:` (JSON) or `R` (ZINC).
 * Prior to performing an Update, the client should do a Read to ensure it has the latest version of the entity to be modified.
 * It is not possible to update the identifier tag value or the primary tag of an entity
 {{% /alert %}}
