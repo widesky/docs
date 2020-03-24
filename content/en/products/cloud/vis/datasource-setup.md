@@ -33,9 +33,9 @@ Grafana requires a configured data source before building dashboards. To configu
 
 Access mode controls how requests to the data source are handled by the browser.
 
-### Server access mode (Default)
+#### Server access mode (Default)
 
-All requests are made from the browser to Grafana backend/server which in turn forwards the requests to the data source and by that circumvent possible Cross-Origin Resource Sharing (CORS) requirements.
+All requests are made from the browser to Grafana backend/server which in turn forwards the requests to the data source and by that circumvent possible [Cross-Origin Resource Sharing (CORS)](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) requirements.
 
-### Browser access mode
+#### Browser access mode
 All requests are made from the browser directly to the data source and may be subject to Cross-Origin Resource Sharing (CORS) requirements. The URL needs to be accessible from the browser if you select this access mode.
