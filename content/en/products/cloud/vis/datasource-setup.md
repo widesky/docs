@@ -9,12 +9,12 @@ description: >
 ## Configuring the data source
 Grafana requires a configured data source before building dashboards. To configure the WideSky data source:
 1. Open the side menu by clicking the Grafana icon in the top header.
-2. In the side menu under the Dashboards link you should find a link named Data Sources.
-3. Click the + Add data source button in the top header.
-4. Select WideSky from the Type drop-down menu.
+2. In the side menu under the _Dashboards_ link you should find a link named _Data Sources_.
+3. Click the _+ Add data source_ button in the top header.
+4. Select _WideSky_ from the _Type_ drop-down menu.
 5. Complete the fields in the following table.
 
-{{% alert title="Note"  color="info" %}} If you do not see the Data Sources link in your side menu it means that your current user does not have the Admin role for the current Grafana organization.
+{{% alert title="Note"  color="info" %}} If you do not see the _Data Sources_ link in your side menu it means that your current user does not have the _Admin_ role for the current Grafana organization.
 {{% /alert %}}
 
 |Name|Description|
