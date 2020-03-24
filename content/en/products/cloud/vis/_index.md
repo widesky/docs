@@ -29,7 +29,7 @@ We've extended Grafana to included a feature-rich data plugin for WideSky using 
 + Support for Grafana templates
 + Real-time control buttons
 
-You will be issued with a URI and administrator level credentials. You can use the guides below to understnad how to user the plugin.
+You will be issued with a URI and administrator level credentials. You can use the guides below to understand how to user the plugin.
 
 {{% alert title="Note"  color="primary" %}} If you're new to Grafana, we recommend visiting their [getting started guide](https://grafana.com/docs/grafana/latest/guides/getting_started/) to get acquainted with Grafana basics.
 {{% /alert %}}
