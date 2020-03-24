@@ -1,5 +1,5 @@
 ---
-title: "Upadate"
+title: "Update"
 linkTitle: "update"
 weight: 7
 type: docs
