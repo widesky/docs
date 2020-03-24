@@ -22,7 +22,7 @@ description: >
 
 {{% alert title="Note"  color="primary" %}} * To remove existing tags, set the tag value to `x:` (JSON) or `R` (ZINC).
 * Prior to performing an Update, the client should do a Read to ensure it has the latest version of the entity to be modified.
-* It is not possible to update the identifier tag value or the primary tag of an entity
+* It is not possible to update the identifier tag (`id`) value or the primary tag of an entity
 {{% /alert %}}
 
 **Response:** *A grid with a row for each entity updated. Each row corresponds to the request grid and its respective row ordering.*
