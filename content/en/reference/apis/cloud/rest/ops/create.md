@@ -103,7 +103,7 @@ description: >
   **Request:**
 ```json
 POST /api/createRec HTTP/1.1
-Host: example.com
+Host: example.on.widesky.cloud
 Authorization: Bearer <authToken>
 Accept: application/json
 Content-Type: application/json
@@ -172,7 +172,7 @@ Content-Type: application/json
   **Request:**
   ```json
   POST /api/createRec HTTP/1.1
-  Host: example.com
+  Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
   Accept: application/json
   Content-Type: application/json

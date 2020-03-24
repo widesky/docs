@@ -37,7 +37,7 @@ description: >
 **Request**
 ```json
 POST /api/updateRec HTTP/1.1
-Host: example.com
+Host: example.on.widesky.cloud
 Authorization: Bearer <authToken>
 Accept: application/json
 Content-Type: application/json
