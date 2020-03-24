@@ -39,7 +39,7 @@ Let's look at a simple example. All fields appear on the left, colored <span sty
 
 You can see that we query for 3 fields:
 + **haystack**: Each query must begin with this field.
-+ **search**: A sub-field of **haystack**, search uses a project haystack filter, in this case 'point' to search WideSky Entities with the tag `point`.
++ **search**: A sub-field of **haystack**, search uses a Project Haystack filter, in this case 'point' to search WideSky Entities with the tag `point`.
 + **count**: A sub-field of **search**, count return with the number of entities returned in the search. In our case, it's 4.
 
 Let's look at a query that plots timeseries data:
@@ -48,7 +48,7 @@ Let's look at a query that plots timeseries data:
 
 You can see that we query for 4 fields:
 + **haystack**: Each query must begin with this field.
-+ **search**: A sub-field of **haystack**, search uses a project haystack filter, in this case 'point and his and power' to search WideSky Entities with the tags `point`, `his` and `power`.
++ **search**: A sub-field of **haystack**, search uses a Project Haystack filter, in this case 'point and his and power' to search WideSky Entities with the tags `point`, `his` and `power`.
 + **history**: A sub-field of search, that's used to access history data of the `point` entities.
 + **timeseries**: A sub-field of history, which returns the timeseries data. In our case, we get 4 series.
 

@@ -272,7 +272,7 @@ For each entity, search for more entities with a filter that also have a tag val
 <td valign="top"><a href="#haystackfilter">HaystackFilter</a>!</td>
 <td>
 
-A project haystack search filter e.g. equip and siteRef->geoCity == "Chicago" See https://project-haystack.org/doc/Filters
+A Project Haystack search filter e.g. equip and siteRef->geoCity == "Chicago" See https://project-haystack.org/doc/Filters
 
 </td>
 </tr>
@@ -416,7 +416,7 @@ Search for entities with a filter that also have a Tag Value {whereTag} that mat
 <td valign="top"><a href="#haystackfilter">HaystackFilter</a>!</td>
 <td>
 
-A project haystack search filter. equip and siteRef->geoCity == "Chicago" See https://project-haystack.org/doc/Filters
+A Project Haystack search filter. equip and siteRef->geoCity == "Chicago" See https://project-haystack.org/doc/Filters
 
 </td>
 </tr>
@@ -568,7 +568,7 @@ Search for entities
 <td valign="top"><a href="#haystackfilter">HaystackFilter</a>!</td>
 <td>
 
-A project haystack search filter
+A Project Haystack search filter
 
 </td>
 </tr>
