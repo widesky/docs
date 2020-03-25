@@ -1,7 +1,7 @@
 ---
 title: "Update Password"
 linkTitle: "updatePassword"
-weight: 15
+weight: 16
 type: docs
 description: >
   Change the password of the currently logged-in user.

@@ -1,7 +1,7 @@
 ---
 title: "Watch Unsubscribe"
 linkTitle: "watchUnsub"
-weight: 13
+weight: 14
 type: docs
 description: >
     Close a "watch" list completely, or remove `point`s bearing the `cur` tag.

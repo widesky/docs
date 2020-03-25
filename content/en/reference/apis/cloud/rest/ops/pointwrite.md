@@ -1,7 +1,7 @@
 ---
 title: "Point Write"
 linkTitle: "pointWrite"
-weight: 14
+weight: 15
 type: docs
 description: >
     Write a value to a `point` bearing the `writable` tag or view the last
