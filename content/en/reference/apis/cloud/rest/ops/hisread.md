@@ -35,8 +35,8 @@ description: >
 The `range` parameter (common to both request types) is a string
 with one of the following formats:
 
-|`range`|Time range selected|
-|-------|-------------------|
+|`range` value|Time range selected|
+|-------------|-------------------|
 |`first`|The oldest (least recent) sample|
 |`last`|The newest (most recent) sample|
 |`today`|All of the samples from midnight of the current day to midnight tomorrow
