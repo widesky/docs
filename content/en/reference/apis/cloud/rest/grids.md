@@ -10,7 +10,7 @@ Data in a Project Haystack server are exchanged in "grids", this is mostly a 2D 
 
 ## Anatomy of a grid
 
-Below is an example of a grid taken from the [`hisRead`](../ops/hisread`) operation page, with the text on the left showing its JSON representation, and to the top-right, the ZINC representation (with extra line breaks added for readability).  A grid can be broken down into 3 major parts:
+Below is an example of a grid taken from the [`hisRead`](../ops/hisread) operation page, with the text on the left showing its JSON representation, and to the top-right, the ZINC representation (with extra line breaks added for readability).  A grid can be broken down into 3 major parts:
 
 ![Anatomy of a grid](/docs/images/haystack-grid.png)
 
