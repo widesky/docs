@@ -42,7 +42,7 @@ Not all data types supported by the Project Haystack JSON format are supported i
   * `r:my.ref My entity` (fully qualified name with descriptive text)
   * `r:d19a3670-6868-441a-8d6c-f461ea6d10ca` (UUID without descriptive text)
   * `r:d19a3670-6868-441a-8d6c-f461ea6d10ca My entity` (UUID with descriptive text)
-* Tags are **removed** by writing `x:` as the value
+* Tags are **removed** by writing `x:` as the value (this is the older Project Haystack 2.0 syntax which predates the newer `-:` syntax)
 * **Dates** are written in ISO-8601 format with a `d:` prefix
   * `d:2020-03-26`
 * **Times** are written in IS0-8601 format with a `h:` prefix
