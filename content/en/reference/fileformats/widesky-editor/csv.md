@@ -30,6 +30,8 @@ For all subsequent rows:
 |B|Text|Delete flag.  If any text is written to this cell, the entity referenced by this row will be deleted when the file is loaded by `widesky-editor`.|
 |C-ZZ|Text|Values for the tags listed in the first row.  If the cell is left blank, the corresponding tag is left unchanged on the entity.  The values themselves are encoded using [JSON](https://project-haystack.org/doc/Json) format.|
 
+#### Encoding tag values
+
 Not all data types supported by the Project Haystack JSON format are supported in CSV.  Those that are are summarised here.
 
 * **Text strings** should be prefixed by `s:`.
