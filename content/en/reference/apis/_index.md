@@ -1,5 +1,5 @@
 ---
 title: "Application Programming Interfaces (APIs)"
-weight: 1
+weight: 3
 type: docs
 ---
