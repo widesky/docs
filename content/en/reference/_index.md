@@ -14,13 +14,13 @@ breadcrumb_disable: true
 ## File formats
 |File format|Description|
 |-----|-----------|
-|widesky-editor CSV| Defines entities and tags read or write to WideSky Cloud.|
-|widesky-editor YAML| Defines entities, tags and actions to read or write to WideSky Cloud.|
+|[widesky-editor CSV](./fileformats/widesky-editor/csv)| Defines entities and tags read or write to WideSky Cloud.|
+|[widesky-editor YAML](./fileformats/widesky-editor/yaml)| Defines entities, tags and actions to read or write to WideSky Cloud.|
 
 ## Command-line interfaces (CLIs)
 |CLI|Description|
 |---|-----------|
-|widesky-editor CLI| The main CLI for WideSky Cloud, which allows you to read and manipulate entities.|
+|[widesky-editor CLI](./clis/widesky-editor)| The main CLI for WideSky Cloud, which allows you to read and manipulate entities.|
 
 ## Application programming interfaces (APIs)
 |API|Description|
