@@ -1,8 +1,28 @@
 ---
 title: "dump"
-weight: 1
+weight: 2
 type: docs
-draft: false
 description: >
-  dump
+  `dump`: Retrieve entities from a WideSky server and write them to a file.
 ---
+
+`widesky-editor dump` is a wrapper around the [`read`](../../../apis/cloud/rest/ops/read) API end-point which writes the entities out in either YAML (default) or CSV format.
+
+## Usage reference
+
+```
+widesky-editor [-h] [--quiet] [--debug] [--log LOG] [--http-debug]
+               [--uri URI] [--tls-verify TLS_VERIFY]
+               [--username USERNAME] [--password PASSWORD]
+               [--client-id CLIENT_ID] [--client-secret CLIENT_SECRET]
+               [--impersonate-as IMPERSONATE] [--output OUTPUT]
+               [--yaml] [--csv]
+               dump [-h] [--id ID] [--filter FILTER]
+```
+
+* `--id ID`: Dump an entity by UUID or fully qualified name
+* `--filter FILTER`: Dump entities that match the given [Project Haystack filter](https://project-haystack.org/doc/Filters)
+
+Any number or combination of `--id` and `--filter` arguments can be given.
+
+The output format can be selected with `--csv` or `--yaml`, and directed to a file using `--output`, generating files that conform to the [CSV](../../../fileformats/widesky-editor/csv) or [YAML](../../../fileformats/widesky-editor/yaml).  See [Common arguments](../common) for details.
