@@ -6,7 +6,7 @@ description: >
   `dump`: Retrieve entities from a WideSky server and write them to a file.
 ---
 
-`widesky-editor dump` is a wrapper around the [`read`](../../../apis/cloud/rest/ops/read) API end-point which writes the entities out in either YAML (default) or CSV format.
+`widesky-editor dump` is a wrapper around the [`read`](../../../apis/cloud/rest/ops/read) API end-point which writes the entities out in either YAML (default) or CSV format.  The output can be either perused directly, or later loaded back in with the [`load`](../load) command.
 
 ## Usage reference
 
