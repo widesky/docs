@@ -1,19 +1,24 @@
 ---
-title: "yaml"
+title: "widesky-editor YAML"
 weight: 2
 type: docs
 description: >
   "YAML" Ain't a Markup Language format reference
 ---
-`widesky-editor`'s full power is realised when the [YAML](https://yaml.org/) (which stands for _"YAML" Ain't a Markup Language_) file format is used.  YAML is a superset of the JSON format which aims for readability and expressiveness of data types.
+`widesky-editor`'s full power is realised when the [YAML](https://yaml.org/) file format is used. It supports all Project Haystack data types and allows you to edit multiple entities in a single action by using filters.
 
-For best compatibility, we recommend sticking to [YAML 1.0](https://yaml.org/spec/1.0/), avoiding advanced features such as [aliases](https://yaml.org/spec/1.0/#id2563922).
+{{% alert title="Tip" %}}
+For best compatibility, we recommend using [YAML 1.0](https://yaml.org/spec/1.0/)
+{{% /alert %}}
 
-The format used by `widesky-editor` exploits YAML's ability to handle multiple "documents" within a single file, separating each document with a document separator: `---`.  Each "document" within the file encodes a single "action" for the editor to execute.
+The format used by `widesky-editor` exploits YAML's ability to handle multiple "documents" within a single file, separating each document with a document separator: `---`.  Each "document" within the file encodes a single "action" for the editor to execute. Project Haystack's [JSON](https://project-haystack.org/doc/Json) format is used to represent tag values.
 
-The actions are executed in the order encountered.  Like the [CSV](../csv) format, it is of utmost importance that referential integrity is maintained when issuing instructions.  Also like the CSV format, Project Haystack's [JSON](https://project-haystack.org/doc/Json) format is used to represent tag values, however _unlike_ the CSV format, any Project Haystack data type can be represented.
 
-## YAML Actions
+## Actions
+
+{{% alert title="Warning"   color="warning" %}}
+The actions are executed in the order encountered. It is of utmost importance that referential integrity is maintained when issuing instructions.
+{{% /alert %}}
 
 All documents encoding an action to be performed must be written as a YAML map object:
 
@@ -24,7 +29,19 @@ action: ${ACTION}
 ---
 ```
 
-### `create`
+Below is a summary of available actions:
+
+|Action|Description|
+|------|----|-----------|
+|`create`|Create a new entity|
+|`create_or_update`|See if a given entity exists, and either update its tags, or if the entity is not present, create it with the tags given.|
+|`create_or_set`|See if a given entity exists, and either set the tags given tags, or if the entity is not present, create it with the tags given.|
+|`delete`|deletes entities, either by ID or by filter|
+|`update`|Update the tags of given entities|
+|`set`|Update the tags of given entities, and remove any tags not explicitly listed.|
+
+
+### create
 
 Create will try to create a new entity with the given ID, failing if the entity already exists.
 
@@ -41,7 +58,7 @@ tags:
 ---
 ```
 
-### `create_or_update`
+### create_or_update
 
 See if a given entity exists, and either update its tags, or if the entity is not present, create it with the tags given.
 
@@ -73,11 +90,13 @@ delete_tags:
 - energy	# Delete the 'energy' tag
 ```
 
-### `create_or_set`
+### create_or_set
 
-See if a given entity exists, and either update its tags, or if the entity is not present, create it with the tags given.
+See if a given entity exists, and either set the tags given, or if the entity is not present, create it with the tags given.
 
-If the entity already exists, the tags listed will be changed to the values given, and any tag *not* listed will be **deleted**.
+{{% alert title="Warning"   color="warning" %}}
+If the entity already exists, the tags listed will be changed to the values given, and any tag not listed will be deleted.
+{{% /alert %}}
 
 As the name suggests, this does a [`create`](#create) if the entity is new, or a [`set`](#set) if it already exists.
 
@@ -105,18 +124,18 @@ delete_tags:
 - energy	# Delete the 'energy' tag
 ```
 
-### `delete`
+### delete
 
 This deletes entities, either by ID or by filter.  Both can be specified simultaneously in an action, the order of processing will be:
 
-1. the entity listed by the argument, `id`
-2. entities listed by the argument, `ids` in the order given
-3. all entities returned by a search performed with the filter expression given in the `filter` argument.  Ordering is not guaranteed.
-4. all entities returned by a search performed with each filter expression given in the `filters` argument (searched in that order).  Ordering is not guaranteed.
+1. The entity listed by the argument, `id`
+2. Entities listed by the argument, `ids` in the order given
+3. All entities returned by a search performed with the filter expression given in the `filter` argument.  Ordering is not guaranteed.
+4. All entities returned by a search performed with each filter expression given in the `filters` argument (searched in that order).  Ordering is not guaranteed.
 
 #### Delete one entity by ID
 
-To delete a single point, just give its ID as the `id` parameter:
+To delete a single point, give its ID as the `id` parameter:
 ```
 ---
 action: delete
@@ -159,7 +178,7 @@ filters:
 ---
 ```
 
-### `update`
+### update
 
 Update the tags of given entities.  The entities to update can either be explicitly listed, or we can do a search for those matching a given filter.
 
@@ -167,10 +186,10 @@ All tags listed in the `tags` argument will be updated to the given values.  Tag
 
 Like the `delete` instruction above, the entities are chosen and updated in the following order:
 
-1. the entity listed by the argument, `id`
-2. entities listed by the argument, `ids` in the order given
-3. all entities returned by a search performed with the filter expression given in the `filter` argument.  Ordering is not guaranteed.
-4. all entities returned by a search performed with each filter expression given in the `filters` argument (searched in that order).  Ordering is not guaranteed.
+1. The entity listed by the argument, `id`
+2. Entities listed by the argument, `ids` in the order given
+3. All entities returned by a search performed with the filter expression given in the `filter` argument.  Ordering is not guaranteed.
+4. All entities returned by a search performed with each filter expression given in the `filters` argument (searched in that order).  Ordering is not guaranteed.
 
 Tags can be deleted by listing them in `delete_tags`.
 
@@ -255,18 +274,20 @@ tags:
 ---
 ```
 
-### `set`
+### set
 
 Update the tags of given entities, and remove any tags not explicitly listed.  The entities to update can either be explicitly listed, or we can do a search for those matching a given filter.
 
+{{% alert title="Warning"   color="warning" %}}
 All tags listed in the `tags` argument will be updated to the given values.  Tags _not_ listed will be **deleted**.
+{{% /alert %}}
 
 Like the `delete` instruction above, the entities are chosen and updated in the following order:
 
-1. the entity listed by the argument, `id`
-2. entities listed by the argument, `ids` in the order given
-3. all entities returned by a search performed with the filter expression given in the `filter` argument.  Ordering is not guaranteed.
-4. all entities returned by a search performed with each filter expression given in the `filters` argument (searched in that order).  Ordering is not guaranteed.
+1. The entity listed by the argument, `id`
+2. Entities listed by the argument, `ids` in the order given
+3. All entities returned by a search performed with the filter expression given in the `filter` argument.  Ordering is not guaranteed.
+4. All entities returned by a search performed with each filter expression given in the `filters` argument (searched in that order).  Ordering is not guaranteed.
 
 Tags can be deleted by listing them in `delete_tags`.
 

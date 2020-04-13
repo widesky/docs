@@ -14,8 +14,8 @@ breadcrumb_disable: true
 ## File formats
 |File format|Description|
 |-----|-----------|
-|[widesky-editor CSV](./fileformats/widesky-editor/csv)| Defines entities and tags read or write to WideSky Cloud.|
-|[widesky-editor YAML](./fileformats/widesky-editor/yaml)| Defines entities, tags and actions to read or write to WideSky Cloud.|
+|[widesky-editor CSV](./fileformats/csv)| Defines entities and tags read or write to WideSky Cloud.|
+|[widesky-editor YAML](./fileformats/yaml)| Defines entities, tags and actions to read or write to WideSky Cloud.|
 
 ## Command-line interfaces (CLIs)
 |CLI|Description|
@@ -27,10 +27,3 @@ breadcrumb_disable: true
 |---|-----------|
 |[WideSky Cloud GraphQL API](./apis/cloud/graphql)| The API for performing analytics on both entities and time series data.|
 |[WideSky Cloud REST API](./apis/cloud/rest)| The main API for manipulating WideSky Cloud Entities, storing and retrieving time-series data, and controlling devices in real-time.|
-
-
-
-
-
-
-

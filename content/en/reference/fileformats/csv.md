@@ -1,12 +1,12 @@
 ---
-title: "csv"
+title: "widesky-editor CSV"
 weight: 1
 type: docs
 description: >
   Comma-Separated Values format reference
 ---
 
-`widesky-editor` supports a simplified CSV format for use with spreadsheeting applications.  The schema is deliberately limited in its scope to maximise compatibility with spreadsheet tools.  It is loosely defined by the IETF in [RFC-4180](https://tools.ietf.org/html/rfc4180.html#section-2).
+`widesky-editor` supports a simplified CSV format for use with spreadsheeting applications.  The schema is deliberately limited in its scope to maximise compatibility with spreadsheet tools.
 
 ## File format
 
@@ -14,25 +14,25 @@ description: >
 
 The first row is *always* used for header information:
 
-|Cell Position|Data Type|Description|
-|-------------|---------|-----------|
-|A1|Don't Care|Labels the column storing ID references, content is ignored|
-|B1|Don't Care|Labels the column storing the "delete" flag, content is ignored|
-|C1-ZZ1|Text|Name of the tag allocated to this column|
+|Cell Position|Description|
+|-------------|-----------|
+|A1|Labels the column storing ID references, content is ignored|
+|B1|Labels the column storing the "delete" flag, content is ignored|
+|C1-ZZ1|Name of the tag allocated to this column|
 
 ### Row 2 onwards: Data rows
 
 For all subsequent rows:
 
-|Column|Data Type|Description|
-|------|---------|-----------|
-|A|Text|ID of the entity being created/updated/deleted.  This is _assumed_ to be either the fully qualified name or the UUID of the entity.|
-|B|Text|Delete flag.  If any text is written to this cell, the entity referenced by this row will be deleted when the file is loaded by `widesky-editor`.|
-|C-ZZ|Text|Values for the tags listed in the first row.  If the cell is left blank, the corresponding tag is left unchanged on the entity.  The values themselves are encoded using [JSON](https://project-haystack.org/doc/Json) format.|
+|Column|Description|
+|------|-----------|
+|A|ID of the entity being created/updated/deleted.  This is _assumed_ to be either the fully qualified name or the UUID of the entity.|
+|B|Delete flag.  If any text is written to this cell, the entity referenced by this row will be deleted when the file is loaded by `widesky-editor`.|
+|C-ZZ|Values for the tags listed in the first row.  If the cell is left blank, the corresponding tag is left unchanged on the entity.  The values themselves are encoded using [JSON](https://project-haystack.org/doc/Json) format.|
 
 #### Encoding tag values
 
-Not all data types supported by the Project Haystack JSON format are supported in CSV.  Those that are are summarised here.
+All tag values are encoded using the Project Haystack JSON format. Below are the supported data types:
 
 * **Text strings** should be prefixed by `s:`.
   * `s:My string`
@@ -51,6 +51,10 @@ Not all data types supported by the Project Haystack JSON format are supported i
   * `h:13:29:24`
 * **Date/Time timestamps** are written in ISO-8601 format with a `t:` prefix and the time-zone name suffixed with a space.
   * `t:2020-03-26T13:29:24 Brisbane`
+
+{{% alert title="Tip" %}}
+Use the [YAML](../yaml/) file format for support of other Project Haystack data types.
+{{% /alert %}}
 
 ### Handling of special characters
 
@@ -116,16 +120,16 @@ In this example, we delete two entities (which were dumped by `widesky-editor`),
 |`c5ca843c-d294-4fd9-88ff-e839192aff15`|`X`|`s:kWh Import`||`r:2e78589c-a34d-4907-8d95-ee362bc7d56d Milton Office`||`r:44ea0813-43d9-460f-a700-591ff59dc31e Server Room Meter #1`|`m:`|
 |`44ea0813-43d9-460f-a700-591ff59dc31e`|`X`|`s:Server Room Meter #1`||`r:2e78589c-a34d-4907-8d95-ee362bc7d56d Milton Office`|`m:`|||
 |`9b37384d-27b8-48f3-a2d7-487f6f03a516`||`s:Server Room Meter`||`r:2e78589c-a34d-4907-8d95-ee362bc7d56d Milton Office`|`m:`|||
-|`vrtsyd`||`s:"Sydney Office"`|`m:`|||||
-|`vrtsyd.incomer`||`s:"Main Incomer"`||`r:vrtsyd`|`m:`|||
-|`vrtsyd.incomer.kwhImport`||`s:"kWh import"`||`r:vrtsyd`||`r:vrtsyd.incomer`|`m:`|
+|`wssyd`||`s:"Sydney Office"`|`m:`|||||
+|`wssyd.incomer`||`s:"Main Incomer"`||`r:wssyd`|`m:`|||
+|`wssyd.incomer.kwhImport`||`s:"kWh import"`||`r:wssyd`||`r:wssyd.incomer`|`m:`|
 
 ```
 "ID","Delete","dis","site","siteRef","equip","equipRef","point"
 "c5ca843c-d294-4fd9-88ff-e839192aff15","X","s:kWh Import","","r:2e78589c-a34d-4907-8d95-ee362bc7d56d Milton Office","","r:44ea0813-43d9-460f-a700-591ff59dc31e Server Room Meter #1","m:"
 "44ea0813-43d9-460f-a700-591ff59dc31e","X","s:Server Room Meter #1","","r:2e78589c-a34d-4907-8d95-ee362bc7d56d Milton Office","m:","",""
 "9b37384d-27b8-48f3-a2d7-487f6f03a516","","s:Server Room Meter","","r:2e78589c-a34d-4907-8d95-ee362bc7d56d Milton Office","m:","",""
-"vrtsyd","","s:"Sydney Office"","m:","","","",""
-"vrtsyd.incomer","","s:"Main Incomer"","","r:vrtsyd","m:","",""
-"vrtsyd.incomer.kwhImport","","s:"kWh import"","","r:vrtsyd","","r:vrtsyd.incomer","m:"
+"syd","","s:"Sydney Office"","m:","","","",""
+"wssyd.incomer","","s:"Main Incomer"","","r:wssyd","m:","",""
+"wssyd.incomer.kwhImport","","s:"kWh import"","","r:wssyd","","r:wssyd.incomer","m:"
 ```

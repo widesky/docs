@@ -14,7 +14,7 @@ Grafana requires a configured data source before building dashboards. To configu
 4. Select _WideSky_ from the _Type_ drop-down menu.
 5. Complete the fields in the following table.
 
-{{% alert title="Note"  color="info" %}} If you do not see the _Data Sources_ link in your side menu it means that your current user does not have the _Admin_ role for the current Grafana organization.
+{{% alert title="Note"  color="primary" %}} If you do not see the _Data Sources_ link in your side menu it means that your current user does not have the _Admin_ role for the current Grafana organization.
 {{% /alert %}}
 
 |Name|Description|
