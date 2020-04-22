@@ -2,7 +2,7 @@
 title: "REST"
 linkTitle: "REST"
 weight: 2
-Description: For editing and controlling entities, and reading / writing time series data. Based on Project Haystack API specification.
+Description: The API for editing and controlling entities, and reading / writing time series data. Based on Project Haystack API specification.
 type: docs
 ---
 

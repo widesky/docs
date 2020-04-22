@@ -3,7 +3,7 @@ title: "Authentication"
 linkTitle: "Authentication"
 weight: 1
 type: docs
-Description: How to Authenticate via OAuth2
+Description: Authentication via OAuth2
 ---
 
 Both WideSky Cloud GraphQL and REST APIs use JSON-based OAuth2 authentication. This section describes how to get a token for subsequent REST or GraphQL calls.

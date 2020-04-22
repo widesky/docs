@@ -1,6 +1,6 @@
 ---
-title: "WideSky Cloud APIs"
+title: "WideSky Cloud"
 weight: 2
 type: docs
-description: APIs used in WideSky Cloud
+description: Web APIs for all WideSky Cloud functions
 ---
