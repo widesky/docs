@@ -1,34 +1,22 @@
 ---
 title: "Grids"
-linkTitle: "Grids"
 weight: 1
-Description: What are grids and how are they structured?
 type: docs
+description: Data serialization formats
 ---
 
-Data in a Project Haystack server are exchanged in "grids", this is mostly a 2D tabular structure with some additional metadata tacked on.  These are then represented in either JSON or ZINC format.  The these grid formats are covered in detail under [Serialization](../serialization).
+## Overview
+Data exchanged with the WideSky REST API is serialized in grids. Grids are two-dimensional tabular representations of tagged entities with some additional metadata. These are represented in either JSON or ZINC formats.
 
 ## Anatomy of a grid
+For a detailed explination, see the Project Haystack specification for <a href="https://project-haystack.org/doc/Grids" target="_blank" rel="noopener">grids</a>
 
-Below is an example of a grid taken from the [`hisRead`](../ops/hisread) operation page, with the text on the left showing its JSON representation, and to the top-right, the ZINC representation (with extra line breaks added for readability).  A grid can be broken down into 3 major parts:
+## Formats
 
-![Anatomy of a grid](/docs/images/haystack-grid.png)
+Either ZINC or JSON formats can be used for grids. Use the Project Haystack specification links below for detailed explinations:
 
-### 1. Grid Metadata
-
-This section includes metadata which pertains to the _entire_ grid.  A good example of this would be the `ver` field, which stipulates what version of the Project Haystack standard is in use, this is a mandatory field in the grid metadata.
-
-The above example shows two other fields, `hisStart` and `hisEnd`, both of which are `Marker`s.  Any Project Haystack data type can appear as the value for a metadata field.
-
-### 2. Columns
-
-The columns follow the grid metadata.  Each column has its own metadata, at minimum, includes the `name` (see 2.1 in the diagram) of the column.  In the above example, the `v0` and `v1` columns also carry an `id` metadata tag (a `Ref`), whilst the column named `ts` just carries the name of the column only.
-
-There must be at least one column.
-
-### 3. Rows
-
-The actual data carried in the grid is carried in the rows of the grid.  There can be any number of rows in a grid, including zero.
++ <a href="https://project-haystack.org/doc/Json" target="_blank" rel="noopener">JSON</a>
++ <a href="https://project-haystack.org/doc/Zinc" target="_blank" rel="noopener">ZINC</a>
 
 ## Special grids
 
@@ -38,17 +26,17 @@ An empty grid is one that carries no data.  Typically, there is a "dummy" column
 
 In JSON, these look like this:
 
-```json
-{
-    "meta": {
-        "ver": "2.0"
-    },
-    "cols": [
-        {"name": "empty"}
-    ],
-    "rows": []
-}
-```
+  ```
+  {
+      "meta": {
+          "ver": "2.0"
+      },
+      "cols": [
+          {"name": "empty"}
+      ],
+      "rows": []
+  }
+  ```
 
 or as ZINC:
 
@@ -62,15 +50,15 @@ empty
 
 Exceptions in a Project Haystack server are reported by way of an error grid.  This looks very much like the "empty" grid above, however the metadata carries the following fields:
 
-|Field|Kind|Value Description|
-|-----|----|-----------------|
-|`err`|`Marker`|Indicates that this grid carries an error message.|
-|`dis`|`Str`|Human-readable error message reported by the server.|
-|`errTrace`|`str`|(Optional) Stack trace of the error from the server.|
+  |Field|Kind|Value Description|
+  |-----|----|-----------------|
+  |`err`|`Marker`|Indicates that this grid carries an error message.|
+  |`dis`|`Str`|Human-readable error message reported by the server.|
+  |`errTrace`|`str`|(Optional) Stack trace of the error from the server.|
 
 In JSON, an error grid may look like this:
 
-```json
+```
 {
     "meta": {
         "ver":"2.0",
@@ -92,5 +80,14 @@ empty
 
 
 ```
+{{% alert title="Tip"  color="primary" %}}
+We recommend to _always_ look for the `err` marker tag in any and all grids returned by the WideSky server before processing any other grid content.
+{{% /alert %}}
 
-It is prudent to _always_ look for the `err` marker tag in any and all grids returned by the WideSky server before processing any other grid content.
+
+
+### Other Resources:
+Below are some helpful developer resources for handling these formats:
++ <a href="https://github.com/widesky/hszinc" target="_blank" rel="noopener">hszinc</a> for using ZINC in Python
++ WideSky Javascript client library<a href="https://github.com/widesky/jswidesky-client" target="_blank" rel="noopener">jswidesky-client</a>.
++ Project Haystack <a href="https://project-haystack.org/download#source" target="_blank" rel="noopener">source code resources</a>.

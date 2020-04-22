@@ -7,6 +7,18 @@ description: >
     Retrieve historical data from a `point` entity bearing the `his` tag.
 ---
 
+The hisRead operation is used to read time-series data from one or more historised points. You can perform a query on a single point, or read from multiple points using our extended multi-point query.
+
+
+{{% alert title="Tip"  color="primary" %}}
+For more advanced mathematical operations used for data analysis, use the GraphQL [History](../../../graphql/schema/#history) Object
+{{% /alert %}}
+
+
+## Timezone conversion
+
+
+
 ## Details
 
 **URL:** `/api/hisRead`
@@ -63,7 +75,7 @@ with one of the following formats:
 |`ts`|`DateTime`|Sample time-stamp|
 |`val`|See `point`'s `kind` tag|Value recorded for the point at that time|
 
-**Response (single point):** *Grid with the following metadata fields:*
+**Response (multiple point):** *Grid with the following metadata fields:*
 
 |Field|Kind|Value Description|
 |------|----|-----------|
@@ -90,7 +102,7 @@ Host: example.on.widesky.cloud
 Authorization: Bearer <authToken>
 Accept: application/json
 Content-Type: application/json
-  
+
 {
   "meta": {
     "ver": "2.0"
@@ -144,7 +156,7 @@ Host: example.on.widesky.cloud
 Authorization: Bearer <authToken>
 Accept: application/json
 Content-Type: application/json
-  
+
 {
   "meta": {
     "ver": "2.0"

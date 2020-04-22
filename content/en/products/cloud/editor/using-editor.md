@@ -74,7 +74,7 @@ Each command can have the following:
 |(Optional) *tags*|A block of tags to be assigned, edited or deleted|
 |(Optional) *filter* OR *id*| A [Project Haystack filter](https://project-haystack.org/doc/Filters) or entity id|
 
-{{% alert title="Tip"  color="info" %}}
+{{% alert title="Tip"  color="primary" %}}
 The id can ether be a UUID or Fully-Qualified Name.
 {{% /alert %}}
 

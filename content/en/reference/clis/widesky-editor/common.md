@@ -28,14 +28,6 @@ widesky-editor [-h] [--quiet] [--debug] [--log LOG] [--http-debug]
 
 In the event that authentication fails, `--debug --http-debug` can be useful to see what went wrong.
 
-### TLS options
-
-* `--tls-verify TLS_VERIFY`: Turn off TLS verification, or specify an alternate certificate chain.  If set to `skip`, all TLS verification is turned off (**strongly** not recommended).
-
-#### Verifying Let's Encrypt "test" certificates
-
-Download the [Fake LE Root X1](https://letsencrypt.org/certs/fakelerootx1.pem) from Let's Encrypt website to a directory on your workstation, and specify its local path as `TLS_VERIFY`.
-
 ### WideSky server URI and credentials
 
 * `--uri URI`: Sets the base address of the WideSky server, e.g. `https://example.on.widesky.cloud/widesky/`
@@ -50,5 +42,5 @@ Of these, `--uri`, `--username`, `--password`, `--client-id` and `--client-secre
 ### Output mode selection and redirection
 
 * `--output OUTPUT`: Writes the output of the command to a file instead of standard output.
-* `--csv`: Use CSV format for output
-* `--yaml`: Use YAML format for output (default)
+* `--csv`: Use [CSV format](../../../fileformats/csv/) for output
+* `--yaml`: Use [YAML format](../../../fileformats/yaml/) for output (default)

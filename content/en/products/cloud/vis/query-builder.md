@@ -175,7 +175,7 @@ You can specify what field(s) to alias by specifying the path of the field relat
 |`../`|The parent field of the current `timeSeries` field|
 |`../../`|The field that is two levels above the current `timeSeries` field|
 |`../<field_A>`|The sub-field `<field_A>` of the current `timeSeries` field|
-|`../{<field_A>[n].<field_B>}`|The sub-field field_B from the nth element of sub-field`field_A`, of the current `timeSeries` field|
+|`../{<field_A>[n].<field_B>}`|The sub-field field_B from the nth element of sub-field`field_A`, of the current `timeSeries` field. Array indexes start at 0.|
 
 
 

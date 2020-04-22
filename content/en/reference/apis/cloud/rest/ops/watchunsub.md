@@ -7,102 +7,128 @@ description: >
     Close a "watch" list completely, or remove `point`s bearing the `cur` tag.
 ---
 
-## Details
-
-The `watchUnsub` operation is used for removing points from or closing a watch.   [Watches](http://project-haystack.org/doc/Rest#watches) are a mechanism used to provide real-time updates to a Project Haystack client by way of a simple polling-based HTTP API.
+The `watchUnsub` operation is used for removing entities or closing a watch that was previously created by the [`watchSub`](../watchsub) op.
 
 Only real-time `point`s (those bearing the `cur` tag) can be used with a watch, any point lacking the `cur` tag will be ignored.
 
-**URL:** `/api/watchUnsub`
+## Details
+- **URL:** `/api/watchUnsub`
 
-**Method:** `POST`
+- **Method:** `POST`
 
-**Request Data Params (close a watch):** *A grid with the following metadata fields:*
+- **Request Data Params (close a watch):** A grid with the following metadata fields:
 
-|Field|Kind|Value Description|
-|------|----|-----------|
-|`watchId`|`Str`|ID of the watch previously returned by `watchSub`|
-|`close`|`Marker`|Close the watch.  By including this marker, you are indicating to the server that the watch should be closed.|
+  |Meta Field|Required|Kind|Value Description|
+  |------|--|--|-----------|
+  |`watchId`|✓|`Str`|ID of the watch previously returned by [`watchSub`](../watchsub)|
+  |`close`||`Marker`|Close the watch. By including this marker, you are indicating to the server that the watch should be closed.|
 
-*… the grid body is not critical*
+  The grid body is not critical
 
-**Request Data Params (remove from watch):** *A grid with the following metadata fields:*
 
-|Field|Kind|Value Description|
-|------|----|-----------|
-|`watchId`|`Str`|The ID of the watch object previously returned by `watchSub`|
+  {{% alert title="Tip"  color="primary" %}}
+The watch will only be closed if no other clients are subscribed to it.
+  {{% /alert %}}
 
-*… and one or more rows with the following columns:*
 
-|Column|Kind|Value Description|
-|------|----|-----------|
-|`id`|`Ref`|Point to be removed from the watch|
 
-**Response (both types):** *An empty grid.*
+- **Request Data Params (remove from watch):**
+  - A grid with the following metadata fields:
+
+    |Meta Field|Required|Kind|Value Description|
+    |------|--|--|-----------|
+    |`watchId`|✓|`Str`|The ID of the watch object previously returned by [`watchSub`](../watchsub)|
+
+  - With one or more rows with the following columns:
+
+    |Column|Required|Kind|Value Description|
+    |------|---|-|-----------|
+    |`id`|*one or more*|`Ref`|Point to be removed from the watch|
+
+    {{% alert title="Tip"  color="primary" %}}
+When removing points only (i.e. not closing the watch), the watchId remains unchanged.
+    {{% /alert %}}
+
+- **Response (both types):** An empty grid.
 
 ---
-### Examples:
+## Examples:
 
-**Request (close watch):**
-```json
-POST /api/watchUnsub HTTP/1.1
-Host: example.on.widesky.cloud
-Authorization: Bearer <authToken>
-Accept: application/json
-Content-Type: application/json
-  
-{
-  "meta": {
-    "ver": "2.0",
-    "watchId": "s:0255e1c9-519f-4630-bf0e-9bd99b221109",
-    "close": "m:"
-  },
-  "cols": [
-    {
-      "name": "empty"
-    }
-  ],
-  "rows": []
-}
-```
+### Close watch
+- **Request:**
+  ```
+  POST /api/watchUnsub HTTP/1.1
+  Host: example.on.widesky.cloud
+  Authorization: Bearer <authToken>
+  Accept: application/json
+  Content-Type: application/json
 
-**Request (append to watch):**
-```json
-POST /api/watchUnsub HTTP/1.1
-Host: example.on.widesky.cloud
-Authorization: Bearer <authToken>
-Accept: application/json
-Content-Type: application/json
-  
-{
-  "meta": {
-    "ver": "2.0",
-    "watchId": "s:485050d2-4640-45a6-8c81-7ac3eddca2f7"
-  },
-  "cols": [
-    {
-      "name": "id"
-    }
-  ],
-  "rows": [
-    {
-      "id": "r:site.equip2.pt4 pt4"
-    }
-  ]
-}
-```
+  {
+    "meta": {
+      "ver": "2.0",
+      "watchId": "s:0255e1c9-519f-4630-bf0e-9bd99b221109",
+      "close": "m:"
+    },
+    "cols": [
+      {
+        "name": "empty"
+      }
+    ],
+    "rows": []
+  }
+  ```
+- **Response:**
+  ```
+  {
+    "meta": {
+      "ver": "2.0"
+    },
+    "cols": [
+      {
+        "name": "empty"
+      }
+    ],
+    "rows": []
+  }
+  ```
+### Append to watch
+- **Request:**
+  ```
+  POST /api/watchUnsub HTTP/1.1
+  Host: example.on.widesky.cloud
+  Authorization: Bearer <authToken>
+  Accept: application/json
+  Content-Type: application/json
 
-**Response (both request types):**
-```json
-{
-  "meta": {
-    "ver": "2.0"
-  },
-  "cols": [
-    {
-      "name": "empty"
-    }
-  ],
-  "rows": []
-}
-```
+  {
+    "meta": {
+      "ver": "2.0",
+      "watchId": "s:485050d2-4640-45a6-8c81-7ac3eddca2f7"
+    },
+    "cols": [
+      {
+        "name": "id"
+      }
+    ],
+    "rows": [
+      {
+        "id": "r:site.equip2.pt4 pt4"
+      }
+    ]
+  }
+  ```
+
+- **Response:**
+  ```
+  {
+    "meta": {
+      "ver": "2.0"
+    },
+    "cols": [
+      {
+        "name": "empty"
+      }
+    ],
+    "rows": []
+  }
+  ```

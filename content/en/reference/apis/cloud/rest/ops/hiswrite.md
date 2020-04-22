@@ -7,6 +7,9 @@ description: >
     Store historical data in a `point` entity bearing the `his` tag.
 ---
 
+## Timezone conversion
+
+
 ## Details
 
 **URL:** `/api/hisWrite`
@@ -48,7 +51,7 @@ Host: example.on.widesky.cloud
 Authorization: Bearer <authToken>
 Accept: application/json
 Content-Type: application/json
-  
+
 {
   "meta": {
     "ver": "2.0",
@@ -82,7 +85,7 @@ Host: example.on.widesky.cloud
 Authorization: Bearer <authToken>
 Accept: application/json
 Content-Type: application/json
-  
+
 {
   "meta": {
     "ver": "2.0"

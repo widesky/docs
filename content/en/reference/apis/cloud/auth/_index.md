@@ -53,7 +53,7 @@ token_type: The literal string "Bearer"
 
 ## Example
 
-**`Authorization` Header:**
+**Authorization Header:**
 
 If your credentials are:
 
@@ -66,7 +66,7 @@ then you should take the string `myCoolApp:password1234` and encode it using Bas
 bXlDb29sQXBwOnBhc3N3b3JkMTIzNA==
 ```
 
-Your `Authorization` header would therefore look like this:
+Your Authorization header would therefore look like this:
 
 ```
 Authorization: Basic bXlDb29sQXBwOnBhc3N3b3JkMTIzNA==
@@ -118,58 +118,5 @@ Content-Type: application/json
   "refresh_token": "rXltx0DynvQksGaeMgcdv1Y8...",
   "expires_in": 1470633701863,
   "token_type": "Bearer"
-}
-```
-
-## Impersonating another user
-
-The impersonation feature allows an authorised Widesky user to perform a REST operation based on its target user's permission settings.
-
-To be able to imitate another user, the HTTP header of the request must include the `X-IMPERSONATE` key, and its corresponding value will be the target user's identifier.
-
-Permission wise, the user performing the impersonation must have the `IMPERSONATE` permission in the WideSky `role`. That is, at least 1 of the associated `actionPolicies` in the WideSky `role` must carry the `IMPERSONATE` permission in the `permissions` list tag.
-
-In addition, the impersonating user must also have the sufficient permission to do a `MODEL_READ` on the target user's entity model.
-
-At the moment, WideSky's impersonation capability is not supported in the following REST APIs;
-
-* Token request (`login`)
-* Delete token (`logout`)
-* Update password (`updatePassword`)
-
-If an impersonate operation is successful then the HTTP response code relevant to the target operation is replied.
-
-On situation where the impersonation operation fails then the caller is expected to receive the HTTP 400 (Bad request) code from the server.
-
-For security reasons, the response from a failed impersonate request is deliberately set to a very brief "Cannot impersonate" message.
-
-### Example request impersonating a user
-
-```json
-POST /api/read HTTP/1.1
-Host: example.on.widesky.cloud
-Authorization: Bearer <authToken>
-X-IMPERSONATE: b24bcb28-d0c3-4421-a4d1-4124e7e089c3
-Accept: application/json
-Content-Type: application/json
-
-{
-  "meta": {
-    "ver": "2.0"
-  },
-  "cols": [
-    {
-      "name": "filter"
-    },
-    {
-      "name": "limit"
-    }
-  ],
-  "rows": [
-    {
-      "filter": "s:user",
-      "limit": "n:0"
-    }
-  ]
 }
 ```
