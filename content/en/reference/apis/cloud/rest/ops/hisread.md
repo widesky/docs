@@ -58,7 +58,14 @@ with one of the following formats:
 |`{D}`|All of the samples from midnight of the date defined to midnight of the day following the defined date|
 |`{D},{D}`|All of the samples from midnight of the first date defined to midnight of the day following the second date defined|
 
-… where `{D}` is a `Date` value (e.g. `2015-07-24`) and `{DT}` is a `DateTime` (e.g. `2015-07-24T10:34:15+1000 Brisbane`).
+… where:
+
+* `{D}` is a `Date` value (e.g. `2015-07-24`)
+* `{DT}` is a `DateTime` (e.g. `2015-07-24T10:34:15+1000 Brisbane`)
+
+For futher details on how these are formatted, see the Project Haystack documentation for the [ZINC](https://www.project-haystack.org/doc/Zinc#literals) or [JSON](https://www.project-haystack.org/doc/Json#mapping) grid formats.
+
+When specifying `DateTime` ranges (that is, ranges of the form `${DT},${DT}`), the time range selected is **inclusive** of the start `DateTime` value and **exclusive** of the end `DateTime` value.
 
 **Response (single point):** *Grid with the following metadata fields:*
 
