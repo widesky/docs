@@ -15,7 +15,7 @@ For more advanced mathematical operations used for data analysis, use the GraphQ
 {{% /alert %}}
 
 
-## Timezone conversion
+## Time-zone conversion
 
 The `hisRead` operation supports automatic time-zone conversion.  When you perform a `hisRead` request with a time-zone range specifying one or more `DateTime` values, the resulting data set retrieved will be automatically converted to the time-zone matching the one given in the `range` field.
 
