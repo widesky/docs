@@ -51,21 +51,28 @@ with one of the following formats:
 |-------------|-------------------|
 |`first`|The oldest (least recent) sample|
 |`last`|The newest (most recent) sample|
-|`today`|All of the samples from midnight of the current day to midnight tomorrow
+|`today`|All of the samples from midnight of the current day to midnight tomorrow|
 |`yesterday`|All of the samples from midnight of the previous day to midnight of the current day|
-|`{DT}`|All of the samples after a given timestamp|
-|`{DT},{DT}`|All of the samples between the two timestamps|
+|`{DT}`|All of the samples at and following the timestamp given by `{DT}`|
+|`{DT},{DT}`|All of the samples between the two timestamps starting at and including the start `{DT}` and finishing *before* (and excluding) the end `{DT}`|
 |`{D}`|All of the samples from midnight of the date defined to midnight of the day following the defined date|
-|`{D},{D}`|All of the samples from midnight of the first date defined to midnight of the day following the second date defined|
+|`{D},{D}`|All of the samples that fall on or after the first `{D}` and on or before the second `{D}`|
 
 … where:
 
 * `{D}` is a `Date` value (e.g. `2015-07-24`)
-* `{DT}` is a `DateTime` (e.g. `2015-07-24T10:34:15+1000 Brisbane`)
+* `{DT}` is a `DateTime` (e.g. `2015-07-24T10:34:15+10:00 Brisbane`)
 
 For futher details on how these are formatted, see the Project Haystack documentation for the [ZINC](https://www.project-haystack.org/doc/Zinc#literals) or [JSON](https://www.project-haystack.org/doc/Json#mapping) grid formats.
 
-When specifying `DateTime` ranges (that is, ranges of the form `${DT},${DT}`), the time range selected is **inclusive** of the start `DateTime` value and **exclusive** of the end `DateTime` value.
+When specifying `DateTime` ranges (that is, ranges of the form `${DT},${DT}`), the time range selected is **inclusive** of the start `DateTime` value and **exclusive** of the end `DateTime` value.  When the range uses `Date`s instead, the value is inclusive of *both* date values given.  For example:
+
+|Range Template|Literal Example|Effective range|
+|--------------|---------------|---------------|
+|`{DT}`|`2020-04-27T10:00+10:00 Brisbane`|Any sample taken exactly at or after 10:00AM AEST on the 27th April|
+|`{DT},{DT}`|`2020-04-27T08:30+10:00 Brisbane,2020-04-27T17:00+10:00 Brisbane`|All samples taken between 8:30AM and 5:00PM on the 27th April **including** exactly 8:30:00.000 AM right up to 4:59:59.999 PM but **excluding** 5:00:00.000 PM.|
+|`{D}`|`2020-04-27`|All samples taken immediately at midnight or after AEST on the 27th, right up to 11:59:59.999 PM that same day, **excluding** exactly midnight AEST on the 28th.|
+|`{D},{D}`|`2020-04-27,2020-05-01`|All samples taken immediately at midnight or after AEST on the 27th, right up to 11:59:59.999 PM on the 1st, **excluding** exactly midnight AEST on the 2nd.|
 
 **Response (single point):** *Grid with the following metadata fields:*
 
