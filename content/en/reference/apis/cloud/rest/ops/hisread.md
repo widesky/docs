@@ -15,33 +15,6 @@ For more advanced mathematical operations used for data analysis, use the GraphQ
 {{% /alert %}}
 
 
-## Time-zone conversion
-
-The `hisRead` operation supports automatic time-zone conversion.  When you perform a `hisRead` request with a time-zone range specifying one or more `DateTime` values, the resulting data set retrieved will be automatically converted to the time-zone matching the one given in the `range` field.
-
-### Daylight Savings Time support
-
-In cases where the time-zone is influenced by Daylight Savings Time, the UTC offset given in the `DateTime` values (`ts` column) will be advanced by 1 hour ahead of the nominal UTC offset for that region:
-
-```text
-ver:"2.0" hisEnd:2000-03-26T02:01:00+10:00 Sydney hisStart:2000-03-26T02:00:00+11:00 Sydney id:@13641c0a-8e88-41b5-b3ed-75240d8b9bb2
-ts,val
-2000-03-26T02:00:00+11:00 Sydney,120.0kWh # ← DST active
-2000-03-26T02:00:00+10:00 Sydney,150.0kWh # ← DST inactive
-```
-
-### Requests *without* time-zones given
-
-If your `range` parameter does not specify a `DateTime` value explicitly (e.g. `today`', `yesterday`, `first`, `last`, or a range involving plain `Date`s), then the time-zone information is taken from the points in the request.  In the case where all points exist in the same time-zone, the records returned will all be returned *in that same time-zone*.
-
-If one or more points however has a *different* time-zone, the [`Rel` time-zone](https://fantom.org/doc/sys/TimeZone#rel) is used.  This time-zone has a 0-minute offset from UTC, and is used to indicate that all data in the response has been *normalised* to this common time-zone.  For example:
-
-```text
-ver:"2.0" hisEnd:2016-01-01T00:00:00-00:00 Rel hisStart:2016-01-01T00:00:00-00:00 Rel
-ts,v0 id:@00000111-0000-0000-0000-000000000000,v1 id:@00000112-0000-0000-0000-000000000000
-2016-01-01T00:00:00-00:00 Rel,1.0Wh,1.0Wh
-```
-
 ## Details
 
 **URL:** `/api/hisRead`
@@ -129,7 +102,33 @@ When specifying `DateTime` ranges (that is, ranges of the form `${DT},${DT}`), t
 |…|…|… etc …|
 |`vN`|See `kind` tag of `idN`|Value recorded for `idN` at that time|
 
----
+### Time-zone conversion
+
+The `hisRead` operation supports automatic time-zone conversion.  When you perform a `hisRead` request with a time-zone range specifying one or more `DateTime` values, the resulting data set retrieved will be automatically converted to the time-zone matching the one given in the `range` field.
+
+#### Daylight Savings Time support
+
+In cases where the time-zone is influenced by Daylight Savings Time, the UTC offset given in the `DateTime` values (`ts` column) will be advanced by 1 hour ahead of the nominal UTC offset for that region:
+
+```text
+ver:"2.0" hisEnd:2000-03-26T02:01:00+10:00 Sydney hisStart:2000-03-26T02:00:00+11:00 Sydney id:@13641c0a-8e88-41b5-b3ed-75240d8b9bb2
+ts,val
+2000-03-26T02:00:00+11:00 Sydney,120.0kWh # ← DST active
+2000-03-26T02:00:00+10:00 Sydney,150.0kWh # ← DST inactive
+```
+
+#### Requests *without* time-zones given
+
+If your `range` parameter does not specify a `DateTime` value explicitly (e.g. `today`', `yesterday`, `first`, `last`, or a range involving plain `Date`s), then the time-zone information is taken from the points in the request.  In the case where all points exist in the same time-zone, the records returned will all be returned *in that same time-zone*.
+
+If one or more points however has a *different* time-zone, the [`Rel` time-zone](https://fantom.org/doc/sys/TimeZone#rel) is used.  This time-zone has a 0-minute offset from UTC, and is used to indicate that all data in the response has been *normalised* to this common time-zone.  For example:
+
+```text
+ver:"2.0" hisEnd:2016-01-01T00:00:00-00:00 Rel hisStart:2016-01-01T00:00:00-00:00 Rel
+ts,v0 id:@00000111-0000-0000-0000-000000000000,v1 id:@00000112-0000-0000-0000-000000000000
+2016-01-01T00:00:00-00:00 Rel,1.0Wh,1.0Wh
+```
+
 ### Examples:
 
 **Request (single point):**
