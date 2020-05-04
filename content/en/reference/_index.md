@@ -26,4 +26,4 @@ breadcrumb_disable: true
 |API|Description|
 |---|-----------|
 |[WideSky Cloud GraphQL API](./apis/cloud/graphql)| The API for performing analytics on both entities and time series data.|
-|[WideSky Cloud REST API](./apis/cloud/rest)| The main API for manipulating WideSky Cloud Entities, storing and retrieving time-series data, and controlling devices in real-time.|
+|[WideSky Cloud REST API](./apis/cloud/rest)| The main API for manipulating WideSky Cloud Entities, storing and retrieving time series data, and controlling devices in real-time.|

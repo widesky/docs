@@ -224,7 +224,7 @@ You can switch to text edit mode by clicking the pencil icon. This mode allows y
 We've structured the WideSky GraphQL API to provide maximim felxability allowing you to nest fields for asset model walking, or perform data transformation on single or multiple entites in a single request.
 
 {{% alert title="Tip"  color="primary" %}}
-There is no limit to the amount of information or combination of fields and objects you can request in a single GraphQL query. This includes both asset model and time-series data. WideSky, however, limits the execution time of a query to prevent server overloading. For example, Large time-series queries without sufficient time windowing, e.g. Group By Day.
+There is no limit to the amount of information or combination of fields and objects you can request in a single GraphQL query. This includes both asset model and time series data. WideSky, however, limits the execution time of a query to prevent server overloading. For example, Large time series queries without sufficient time windowing, e.g. Group By Day.
 {{% /alert %}}
 
 ### Recusive search example

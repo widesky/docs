@@ -49,7 +49,7 @@ All tag values are encoded using the Project Haystack JSON format. Below are the
   * `d:2020-03-26`
 * **Times** are written in IS0-8601 format with a `h:` prefix
   * `h:13:29:24`
-* **Date/Time timestamps** are written in ISO-8601 format with a `t:` prefix and the time-zone name suffixed with a space.
+* **Date/Time timestamps** are written in ISO-8601 format with a `t:` prefix and the time zone name suffixed with a space.
   * `t:2020-03-26T13:29:24 Brisbane`
 
 {{% alert title="Tip" %}}

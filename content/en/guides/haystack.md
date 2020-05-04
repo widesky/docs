@@ -87,7 +87,7 @@ Bin: a binary blob with a MIME type formatted as Bin(text/plain)
 Bool: boolean "true" or "false".
 Coord: geographic coordinate in latitude/longitude formatted as C(lat,lng)
 Date: an ISO 8601 date as year, month, day: 2011-06-07.
-DateTime: an ISO 8601 timestamp followed by timezone name: 2011-06-07T09:51:27-04:00 New_York
+DateTime: an ISO 8601 timestamp followed by time zone name: 2011-06-07T09:51:27-04:00 New_York
 NA: singleton value which represents not available for missing data
 Number: integer or floating point number annotated with an optional unit of measurement.
 Time: an ISO 8601 time as hour, minute, seconds: 09:51:27.354.

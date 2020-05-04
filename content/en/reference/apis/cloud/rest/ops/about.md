@@ -19,7 +19,7 @@ description: Queries basic information about the server.
   |Column|Kind|Value Description|
   |------|----|-----------|
   |`haystackVersion`|`Str`|Version of REST implementation|
-  |`tz`|`Str`|Server's default timezone|
+  |`tz`|`Str`|Server's default time zone|
   |`serverName`|`Str`|Name of the server or project database|
   |`serverTime`|`DateTime`|Current Date/Time of server's clock|
   |`serverBootTime`|`DateTime`|Date/Time when server was booted up|

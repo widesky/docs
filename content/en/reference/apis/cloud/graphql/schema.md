@@ -154,7 +154,7 @@ A representation of date and time.
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-A Project Haystack dateTime. Formatted as ISO-8601 timestamp followed by timezone name. e.g. 2011-06-07T09:51:27-04:00 New_York
+A Project Haystack dateTime. Formatted as ISO-8601 timestamp followed by time zone name. e.g. 2011-06-07T09:51:27-04:00 New_York
 
 </td>
 </tr>
@@ -177,11 +177,11 @@ Unix timestamp in ms
 </td>
 </tr>
 <tr>
-<td colspan="2" valign="top"><strong>timeZone</strong></td>
+<td colspan="2" valign="top"><strong>time zone</strong></td>
 <td valign="top"><a href="#string">String</a></td>
 <td>
 
-Haystack timezone see https://project-haystack.org/download/tz.txt
+Haystack time zone see https://project-haystack.org/download/tz.txt
 
 </td>
 </tr>
@@ -881,7 +881,7 @@ A set of conditions joined via logical OR
 <td valign="top">[<a href="#timeseries">TimeSeries</a>]</td>
 <td>
 
-The history time-series
+The history time series
 
 </td>
 </tr>

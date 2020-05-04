@@ -8,7 +8,7 @@ description: >
   How to integrate, structure and perform advanced analytics on your data.
 ---
 
-WideSky Cloud is used to collect and analyse time-series data from a wide variety of devices and equipment. In order to organise this data, WideSky builds a [directed graph structure](https://en.wikipedia.org/wiki/Directed_graph) of all the devices (Assets) for which data is collected from. This Asset Model maintains the relationships between the devices and other important information about the devices like descriptions, unit of measures, or anything that is of worth.
+WideSky Cloud is used to collect and analyse time series data from a wide variety of devices and equipment. In order to organise this data, WideSky builds a [directed graph structure](https://en.wikipedia.org/wiki/Directed_graph) of all the devices (Assets) for which data is collected from. This Asset Model maintains the relationships between the devices and other important information about the devices like descriptions, unit of measures, or anything that is of worth.
 
 Asset Model
 At it's core, the asset model is a database that stores information about the "Things" that require representation, and the relationship between them. These things could be pieces of equipment, sensors within a piece of equipment, a location grouping things together, basically any physical object can be represented and within the Asset Model, an object is referred as the term entity.

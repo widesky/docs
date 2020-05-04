@@ -13,7 +13,7 @@ The WideSky Cloud REST API exposes a range of functionality to query the asset m
 {{% /alert %}}
 
 ## Operations
-A haystack REST server implements a set of operations (or "ops"). Standard operations are defined to query WideSky, setup subscriptions, or read/write history time-series data. Both requests and responses are modelled as grids. Grids are encoded using either ZINC or JSON serialization formats.
+A haystack REST server implements a set of operations (or "ops"). Standard operations are defined to query WideSky, setup subscriptions, or read/write history time series data. Both requests and responses are modelled as grids. Grids are encoded using either ZINC or JSON serialization formats.
 
 ### Serialization
 All data is exchanged in Project Haystck [grids](./serialization) in either ZINC or JSON format.
@@ -36,8 +36,8 @@ A summary of the currently support operations is listed below:
 |Watch Unsubscribe|`/api/watchUnsub`|✓|✓|The `watchUnsub` operation is used to close a watch entirely or remove entities from a watch.|
 |Watch Poll|`/api/watchPoll`|✓|✓|The `watchPoll` operation is used to poll a watch for changes to the subscribed entity records.|
 |Point Write|`/api/pointWrite`|✓|✓*|The `pointWrite` op is used to read the current status of a writable point's priority array and optionally write to a given level.|
-|Historical Write|`/api/hisWrite`|✓|✓*|The `hisWrite` op is used to post new time-series data to a historised point.|
-|Historical Read|`/api/hisRead`|✓|✓*|The `hisRead` op is used to read time-series data from historised point.|
+|Historical Write|`/api/hisWrite`|✓|✓*|The `hisWrite` op is used to post new time series data to a historised point.|
+|Historical Read|`/api/hisRead`|✓|✓*|The `hisRead` op is used to read time series data from historised point.|
 |Invoke Action|`/api/invokeAction`|✓|☓|The `invokeAction` op is used to invoke an user action on a target entity.|
 |Update Password|`/api/updatePassword`|✓|☓|The `updatePassword` op is used for changing a Widesky user’s password.|
 

@@ -16,7 +16,7 @@ Using this tool, you can:
 + Perform real-time supervisory control of devices
 + Securely service multiple end-customers via a single WideSky Cloud instance
 + Share data insights and knowledge via the web or mobile devices
-+ View and administer all of the  time-series data and asset models
++ View and administer all of the  time series data and asset models
 
 
 ## WideSky data plugin
