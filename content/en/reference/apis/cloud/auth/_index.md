@@ -3,12 +3,12 @@ title: "Authentication"
 linkTitle: "Authentication"
 weight: 1
 type: docs
-Description: How to Authenticate via OAuth2
+Description: Authentication via OAuth2
 ---
 
 Both WideSky Cloud GraphQL and REST APIs use JSON-based OAuth2 authentication. This section describes how to get a token for subsequent REST or GraphQL calls.
 
-You should have been issued with a `username` and `password` for yoour user account, along with a `clientId` and `clientSecret` for your client application. The clientSecret should be treated like a password and be stored securely.
+You should have been issued with a `username` and `password` for your user account, along with a `clientId` and `clientSecret` for your client application. The `clientSecret` should be treated like a password and be stored securely.
 
 ## Authentication Steps
 1. Send both the user's and client application's information to the `token` operation. This operation grants the client application an `accessToken` and `refreshToken`.
@@ -52,6 +52,35 @@ token_type: The literal string "Bearer"
 ```
 
 ## Example
+
+**Authorization Header:**
+
+If your credentials are:
+
+* `clientId`: `myCoolApp`
+* `clientSecret`: `password1234`
+
+then you should take the string `myCoolApp:password1234` and encode it using Base64, giving you:
+
+```
+bXlDb29sQXBwOnBhc3N3b3JkMTIzNA==
+```
+
+Your Authorization header would therefore look like this:
+
+```
+Authorization: Basic bXlDb29sQXBwOnBhc3N3b3JkMTIzNA==
+```
+
+Some HTTP clients will do this for you if you tell them to use [HTTP Basic authentication](https://tools.ietf.org/html/rfc2617#section-2) and specify `clientId` for the `username` field and `clientSecret` for the `password`, e.g. in [`curl`](https://curl.haxx.se/):
+
+```
+$ curl -u myCoolApp:password1234 \
+       -H "Accept: application/json" \
+       -H "Content-Type: application/json" \
+       -XPOST -d '{… see examples below …}' \
+       https://example.on.widesky.cloud/widesky/oauth2/token
+```
 
 **Request (access token):**
 ```

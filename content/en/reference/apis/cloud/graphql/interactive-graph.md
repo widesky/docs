@@ -65,7 +65,7 @@ description: Representaion of the WideSky GraphQL API as an interactive graph
     <script src="https://cdn.jsdelivr.net/npm/react-dom@16/umd/react-dom.production.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.css" />
     <script src="https://cdn.jsdelivr.net/npm/graphql-voyager/dist/voyager.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
     </script>
 </head>
 <body>
@@ -73,7 +73,7 @@ description: Representaion of the WideSky GraphQL API as an interactive graph
     <div id="voyager">Loading...</div>
     <script>
         function introspectionProvider(introspectionQuery) {
-            return $.getJSON('../widesky-graphql-introspection.json', function(responseBody) {
+            return $.getJSON('/docs/files/widesky-graphql-introspection.json', function(responseBody) {
                 return responseBody;
             });
         }

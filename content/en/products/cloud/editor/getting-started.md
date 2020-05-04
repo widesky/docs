@@ -39,12 +39,12 @@ Use the `load` command and specify `--csv-in` to load in the new CSV file and cr
 
 ```bash
 $ widesky-editor \
---uri <URI> \
---user <USERNAME> \
---password "<PASSWORD>" \
---client-id "<CLIENT_ID>" \
---client-secret "<CLIENT_SECRET>" \
-load --csv-in testModel.csv
+        --uri <URI> \
+        --user <USERNAME> \
+        --password "<PASSWORD>" \
+        --client-id "<CLIENT_ID>" \
+        --client-secret "<CLIENT_SECRET>" \
+    load --csv-in testModel.csv
 ```
 
 You should see output similar to the following:
@@ -62,14 +62,14 @@ Use the `dump` command and use the `--filter` argument to specify the entities w
 
 ```bash
 $ widesky-editor --output testEntities.csv \
---csv \
---uri <URI> \
---user <USERNAME> \
---password "<PASSWORD>" \
---client-id "<CLIENT_ID>" \
---client-secret "<CLIENT_SECRET>" \
-dump \
---filter 'siteRef==@editorTestSite or id==@editorTestSite'
+        --csv \
+        --uri <URI> \
+        --user <USERNAME> \
+        --password "<PASSWORD>" \
+        --client-id "<CLIENT_ID>" \
+        --client-secret "<CLIENT_SECRET>" \
+    dump \
+        --filter 'siteRef==@editorTestSite or id==@editorTestSite'
 ```
 You should see the following response:
 
@@ -79,7 +79,7 @@ INFO:root:Found 3
 ```
 The file test entities should contain similar contents. Notice that WideSky has created UUIDs for each entity.
 
-![Test entities](/images/editor-test-entities.png)
+![Test entities](/docs/images/editor-test-entities.png)
 
 
 ### Step 5: Edit an entity
@@ -88,17 +88,17 @@ Add a new tag `geoCity` to the `site` entity.
 
 1. In your spreadsheet application or text editor, insert a new column with the heading `geoCity`.
 2. Add a city name e.g. `s:Brisbane` to the row with the `site` entity, and save the CSV file.
-  ![Add geoAddr to the site entity](/images/editor-add-geoAddr.png)
+  ![Add geoAddr to the site entity](/docs/images/editor-add-geoAddr.png)
 3. Use WideSky Editor to read the file and update each entity:
 
 ```bash
 $ widesky-editor \
---uri <URI> \
---user <USERNAME> \
---password "<PASSWORD>" \
---client-id "<CLIENT_ID>" \
---client-secret "<CLIENT_SECRET>" \
-load --csv-in testEntities.csv
+        --uri <URI> \
+        --user <USERNAME> \
+        --password "<PASSWORD>" \
+        --client-id "<CLIENT_ID>" \
+        --client-secret "<CLIENT_SECRET>" \
+    load --csv-in testEntities.csv
 ```
     You should see the following response:
 ```bash
@@ -151,18 +151,18 @@ tags:
 
 1. To delete the entities add `m:` to all three entities:
 
-   ![Add m: in the delete column to delete entities](/images/editor-delete-entities.png)
+   ![Add m: in the delete column to delete entities](/docs/images/editor-delete-entities.png)
 
 2. Load the file again with the command:
 
 ```bash
 $ widesky-editor \
---uri <URI> \
---user <USERNAME> \
---password "<PASSWORD>" \
---client-id "<CLIENT_ID>" \
---client-secret "<CLIENT_SECRET>" \
-load --csv-in testEntities.csv
+        --uri <URI> \
+        --user <USERNAME> \
+        --password "<PASSWORD>" \
+        --client-id "<CLIENT_ID>" \
+        --client-secret "<CLIENT_SECRET>" \
+    load --csv-in testEntities.csv
 ```
 You should see the following response:
 
@@ -173,4 +173,4 @@ INFO:root:Deleting IDs: ce344476-4afc-11ea-85d6-0242ac120003
 ```
 
 ## Where to go next
-+ Understand the yaml mode that provides more powerful commands
++ Understand the YAML mode that provides more powerful commands
