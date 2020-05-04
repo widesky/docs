@@ -10,6 +10,7 @@ menu:
 index_disable: true
 breadcrumb_disable: true
 d3graphviz: true
+draft: true
 ---
 
 Example `graphviz` diagrams to show it can be done.
