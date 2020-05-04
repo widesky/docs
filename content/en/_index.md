@@ -1,7 +1,7 @@
 ---
 title: "WideSky Documentation"
 linkTitle: "Docs Home"
-Description: "WideSky Documentation"
+Description: "Documentation for working with WideSky, the data platform for Energy, Buildings and Industry."
 weight: 1
 type: docs
 breadcrumb_disable: true
@@ -65,5 +65,35 @@ This documentation is currently under development. If you require more informati
         <p class="-text-gray mb-0">Guide coming soon</p>
       </a>
     </div>
+  </div>
+</html>
+
+## Reference Docs
+
+<div class="row justify-content-left">
+  <div class="col-lg-3 col-sm-6 mb-4">
+    <a href="{{<relref "reference/apis" >}}" class="px-4 py-5 bg-white shadow text-center d-block match-height" style="height: 251px;">
+      <img src="/docs/icons/gears.svg" alt="APIs" height="84" width="84">
+      <p> </p>
+      <h4 class="mb-3 mt-0">APIs</h3>
+      <p class="mb-0"></p>
+    </a>
+  </div>
+  <div class="col-lg-3 col-sm-6 mb-4">
+    <a href="{{<relref "reference/clis" >}}" class="px-4 py-5 bg-white shadow text-center d-block match-height" style="height: 251px;">
+      <img src="/docs/icons/tools.svg" alt="CLIs" height="84" width="84">
+      <p> </p>
+      <h4 class="mb-3 mt-0">CLIs</h3>
+      <p class="mb-0"></p>
+    </a>
+  </div>
+  <div class="col-lg-3 col-sm-6 mb-4">
+    <a href="{{<relref "reference/fileformats" >}}" class="px-4 py-5 bg-white shadow text-center d-block match-height" style="height: 251px;">
+      <img src="/docs/icons/apps.svg" alt="file-formats" height="84" width="84">
+      <p> </p>
+      <h4 class="mb-3 mt-0">File Formats</h3>
+      <p class="mb-0"></p>
+    </a>
+  </div>
   </div>
 </html>

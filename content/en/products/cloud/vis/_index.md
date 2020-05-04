@@ -16,7 +16,7 @@ Using this tool, you can:
 + Perform real-time supervisory control of devices
 + Securely service multiple end-customers via a single WideSky Cloud instance
 + Share data insights and knowledge via the web or mobile devices
-+ View and administer all of the  time-series data and asset models
++ View and administer all of the  time series data and asset models
 
 
 ## WideSky data plugin
@@ -29,7 +29,7 @@ We've extended Grafana to included a feature-rich data plugin for WideSky using 
 + Support for Grafana templates
 + Real-time control buttons
 
-You will be issued with a URI and administrator level credentials. You can use the guides below to understnad how to user the plugin.
+You will be issued with a URI and administrator level credentials. You can use the guides below to understand how to use the plugin.
 
 {{% alert title="Note"  color="primary" %}} If you're new to Grafana, we recommend visiting their [getting started guide](https://grafana.com/docs/grafana/latest/guides/getting_started/) to get acquainted with Grafana basics.
 {{% /alert %}}

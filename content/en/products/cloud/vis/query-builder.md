@@ -39,7 +39,7 @@ Let's look at a simple example. All fields appear on the left, colored <span sty
 
 You can see that we query for 3 fields:
 + **haystack**: Each query must begin with this field.
-+ **search**: A sub-field of **haystack**, search uses a project haystack filter, in this case 'point' to search WideSky Entities with the tag `point`.
++ **search**: A sub-field of **haystack**, search uses a Project Haystack filter, in this case 'point' to search WideSky Entities with the tag `point`.
 + **count**: A sub-field of **search**, count return with the number of entities returned in the search. In our case, it's 4.
 
 Let's look at a query that plots timeseries data:
@@ -48,7 +48,7 @@ Let's look at a query that plots timeseries data:
 
 You can see that we query for 4 fields:
 + **haystack**: Each query must begin with this field.
-+ **search**: A sub-field of **haystack**, search uses a project haystack filter, in this case 'point and his and power' to search WideSky Entities with the tags `point`, `his` and `power`.
++ **search**: A sub-field of **haystack**, search uses a Project Haystack filter, in this case 'point and his and power' to search WideSky Entities with the tags `point`, `his` and `power`.
 + **history**: A sub-field of search, that's used to access history data of the `point` entities.
 + **timeseries**: A sub-field of history, which returns the timeseries data. In our case, we get 4 series.
 
@@ -175,7 +175,7 @@ You can specify what field(s) to alias by specifying the path of the field relat
 |`../`|The parent field of the current `timeSeries` field|
 |`../../`|The field that is two levels above the current `timeSeries` field|
 |`../<field_A>`|The sub-field `<field_A>` of the current `timeSeries` field|
-|`../{<field_A>[n].<field_B>}`|The sub-field field_B from the nth element of sub-field`field_A`, of the current `timeSeries` field|
+|`../{<field_A>[n].<field_B>}`|The sub-field field_B from the nth element of sub-field`field_A`, of the current `timeSeries` field. Array indexes start at 0.|
 
 
 
@@ -224,7 +224,7 @@ You can switch to text edit mode by clicking the pencil icon. This mode allows y
 We've structured the WideSky GraphQL API to provide maximim felxability allowing you to nest fields for asset model walking, or perform data transformation on single or multiple entites in a single request.
 
 {{% alert title="Tip"  color="primary" %}}
-There is no limit to the amount of information or combination of fields and objects you can request in a single GraphQL query. This includes both asset model and time-series data. WideSky, however, limits the execution time of a query to prevent server overloading. For example, Large time-series queries without sufficient time windowing, e.g. Group By Day.
+There is no limit to the amount of information or combination of fields and objects you can request in a single GraphQL query. This includes both asset model and time series data. WideSky, however, limits the execution time of a query to prevent server overloading. For example, Large time series queries without sufficient time windowing, e.g. Group By Day.
 {{% /alert %}}
 
 ### Recusive search example
