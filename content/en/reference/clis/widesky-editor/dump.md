@@ -25,4 +25,4 @@ widesky-editor [-h] [--quiet] [--debug] [--log LOG] [--http-debug]
 
 Any number or combination of `--id` and `--filter` arguments can be given.
 
-The output format can be selected with `--csv` or `--yaml`, and directed to a file using `--output`, generating files that conform to the [CSV](../../../fileformats/widesky-editor/csv) or [YAML](../../../fileformats/widesky-editor/yaml).  See [Common arguments](../common) for details.
+The output format can be selected with `--csv` or `--yaml`, and directed to a file using `--output`, generating files that conform to the [widesky-editor CSV](../../../fileformats/csv) or [widesky-editor YAML](../../../fileformats/yaml).  See [Common arguments](../common) for details.
