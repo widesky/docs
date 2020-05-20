@@ -49,7 +49,7 @@ widesky-editor \
 
 You should see output similar to the following:
 
-```bash
+```text
 INFO:root:Read from <open file 'test2.csv', mode 'r' at 0x7f43485fa390>
 INFO:root:Action create Changed: ce1e2a7e-4afc-11ea-85d5-0242ac120003
 INFO:root:Action create Changed: ce344476-4afc-11ea-85d6-0242ac120003
@@ -73,7 +73,7 @@ $ widesky-editor --output testEntities.csv \
 ```
 You should see the following response:
 
-```bash
+```text
 INFO:root:Searching: 'siteRef==@editorTestSite or id==@editorTestSite'
 INFO:root:Found 3
 ```
@@ -101,7 +101,7 @@ $ widesky-editor \
     load --csv-in testEntities.csv
 ```
     You should see the following response:
-```bash
+```text
 INFO:root:Read from <open file 'dump.csv', mode 'r' at 0x7f848f2bc390>
 WARNING:root:fqname is a read-only tag, ignoring
 INFO:root:For ce344476-4afc-11ea-85d6-0242ac120003: setting {}, deleting set([])
@@ -166,7 +166,7 @@ widesky-editor \
 ```
 You should see the following response:
 
-```bash
+```text
 INFO:root:Read from <open file 'dump.csv', mode 'r' at 0x7fedfebfc390>
 INFO:root:Deleting IDs: ce344476-4afc-11ea-85d6-0242ac120003
 ...
