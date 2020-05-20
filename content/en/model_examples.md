@@ -9,7 +9,6 @@ menu:
     weight: 5
 index_disable: true
 breadcrumb_disable: true
-d3graphviz: true
 draft: true
 ---
 
