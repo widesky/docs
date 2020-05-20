@@ -28,11 +28,11 @@ This documentation is currently under development. If you require more informati
       </a>
     </div>
     <div class="col-lg-3 col-sm-6 mb-4">
-      <a class="px-4 py-5 bg-white shadow text-center d-block match-height" style="height: 251px;">
-        <img src="/docs/icons/widesky-edge.svg" alt="WideSky Edge" height="84" width="84">
+      <a href="{{<relref "products/edge" >}}" class="px-4 py-5 bg-white shadow text-center d-block match-height" style="height: 251px;">
+        <img src="/docs/icons/widesky-edge.svg" alt="WideSky Cloud" height="84" width="84">
         <p> </p>
-        <h4 class="-text-gray mb-3 mt-0">WideSky Edge</h3>
-        <p class="-text-gray mb-0">Docs coming soon</p>
+        <h4 class="mb-3 mt-0">WideSky Edge</h3>
+        <p class="mb-0"></p>
       </a>
     </div>
     <div class="col-lg-3 col-sm-6 mb-4">
