@@ -128,7 +128,7 @@ If one or more points however has a *different* time zone, the [`Rel` time zone]
 ### Single Point
 
 - **Request**
-  ```
+  ```json
   POST /api/hisRead HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -156,7 +156,7 @@ If one or more points however has a *different* time zone, the [`Rel` time zone]
   }
   ```
 - **Response:**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0",
@@ -182,7 +182,7 @@ If one or more points however has a *different* time zone, the [`Rel` time zone]
   ```
 ### Multiple points
 - **Request**
-  ```
+  ```json
   POST /api/hisRead HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -214,7 +214,7 @@ If one or more points however has a *different* time zone, the [`Rel` time zone]
   }
   ```
 - **Response:**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0",
@@ -248,7 +248,7 @@ If one or more points however has a *different* time zone, the [`Rel` time zone]
 
   - **Request**
 
-  ```
+  ```json
   POST /api/hisRead HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -277,7 +277,7 @@ If one or more points however has a *different* time zone, the [`Rel` time zone]
   ```
 
   - **Response**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0",
@@ -312,7 +312,7 @@ If one or more points however has a *different* time zone, the [`Rel` time zone]
 ### Multiple points in differnet time zones, and time zone omitted
 
   - **Request**
-  ```
+  ```json
   POST /api/hisRead HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -344,7 +344,7 @@ If one or more points however has a *different* time zone, the [`Rel` time zone]
   }
   ```
   - **Response**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0",

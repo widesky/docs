@@ -46,7 +46,7 @@ Instead of a client routinly using watchPoll to obtain new data, you can instead
 
 
 - **Request:**
-  ```
+  ```json
   POST /api/watchPoll HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -67,7 +67,7 @@ Instead of a client routinly using watchPoll to obtain new data, you can instead
   }
   ```
 - **Response:**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"
@@ -102,7 +102,7 @@ Instead of a client routinly using watchPoll to obtain new data, you can instead
   ```
 ### Fetch all points
 - **Request:**
-  ```
+  ```json
   POST /api/watchPoll HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -125,7 +125,7 @@ Instead of a client routinly using watchPoll to obtain new data, you can instead
   ```
 
 - **Response:**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"

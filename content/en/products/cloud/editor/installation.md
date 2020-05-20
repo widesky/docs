@@ -27,7 +27,7 @@ For Windows users:
 To install editor run this command:
 
 ```bash
-sudo curl -L --fail https://raw.githubusercontent.com/widesky/editor/master/runners/widesky-editor.sh -o /usr/local/bin/widesky-editor
+sudo curl -L --fail https://raw.githubusercontent.com/widesky/editor/master/runners/widesky-editor.sh -o /usr/local/bin/widesky-editor;
 sudo chmod +x /usr/local/bin/widesky-editor
 ```
 
@@ -35,7 +35,7 @@ sudo chmod +x /usr/local/bin/widesky-editor
 To test WideSky editor:
 
 ```bash
-$ widesky-editor --help
+widesky-editor --help
 ```
 {{% alert title="Note"  color="primary" %}} The first run may take longer than normal as the Docker container downloads.
 {{% /alert %}}
@@ -84,7 +84,7 @@ optional arguments:
 To upgrade you need to pull the latest container. Run the following command:
 
 ```bash
-$ docker pull wideskycloud/editor
+docker pull wideskycloud/editor;
 ```
 
 
@@ -93,6 +93,6 @@ $ docker pull wideskycloud/editor
 To uninstall WideSky Editor:
 
 ```bash
-$ sudo rm /usr/local/bin/widesky-editor
-$ docker image rm wideskycloud/editor
+sudo rm /usr/local/bin/widesky-editor;
+docker image rm wideskycloud/editor;
 ```

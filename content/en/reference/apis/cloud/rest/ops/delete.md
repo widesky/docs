@@ -44,7 +44,7 @@ The delete operation is not transactional. That is, if the delete operation fail
 ### Delete by filter
 
 - **Request**
-  ```
+  ```json
   POST /api/deleteRec HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -68,7 +68,7 @@ The delete operation is not transactional. That is, if the delete operation fail
   }
   ```
 - **Response**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"
@@ -105,7 +105,7 @@ The delete operation is not transactional. That is, if the delete operation fail
 
 ### Delete by id
 - **Request**
-  ```
+  ```json
   POST /api/deleteRec HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -129,7 +129,7 @@ The delete operation is not transactional. That is, if the delete operation fail
   }
   ```
 - **Response**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"

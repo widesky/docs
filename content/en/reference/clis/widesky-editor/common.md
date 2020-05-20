@@ -10,7 +10,7 @@ This section details the command line arguments which are common to both `dump` 
 
 ## Usage reference
 
-```
+```bash
 widesky-editor [-h] [--quiet] [--debug] [--log LOG] [--http-debug]
                [--uri URI] [--tls-verify TLS_VERIFY]
                [--username USERNAME] [--password PASSWORD]

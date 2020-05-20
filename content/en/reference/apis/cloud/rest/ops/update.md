@@ -40,7 +40,7 @@ description: >
 ### Change Entity description
 
 - **Request**
-  ```
+  ```json
   POST /api/updateRec HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -68,7 +68,7 @@ description: >
   }
   ```
 - **Response**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"

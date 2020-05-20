@@ -22,7 +22,7 @@ The actions are executed in the order encountered. It is of utmost importance th
 
 All documents encoding an action to be performed must be written as a YAML map object:
 
-```
+```yaml
 ---
 action: ${ACTION}
 # Other parameters go here
@@ -45,7 +45,7 @@ Below is a summary of available actions:
 
 Create will try to create a new entity with the given ID, failing if the entity already exists.
 
-```
+```yaml
 ---
 action: create
 # ID for the entity.  Either a UUID or a fully-qualified name
@@ -66,7 +66,7 @@ If the entity already exists, the tags listed will be changed to the values give
 
 As the name suggests, this does a [`create`](#create) if the entity is new, or an [`update`](#update) if it already exists.
 
-```
+```yaml
 ---
 action: create_or_update
 # ID for the entity.  Either a UUID or a fully-qualified name
@@ -81,7 +81,7 @@ tags:
 
 To delete tags from an entity, list them in `delete_tags`:
 
-```
+```yaml
 ---
 action: create_or_update
 id: my.entity.point
@@ -100,7 +100,7 @@ If the entity already exists, the tags listed will be changed to the values give
 
 As the name suggests, this does a [`create`](#create) if the entity is new, or a [`set`](#set) if it already exists.
 
-```
+```yaml
 ---
 action: create_or_set
 # ID for the entity.  Either a UUID or a fully-qualified name
@@ -115,7 +115,7 @@ tags:
 
 To delete tags from an entity, list them in `delete_tags`:
 
-```
+```yaml
 ---
 action: create_or_set
 id: my.entity.point
@@ -136,7 +136,7 @@ This deletes entities, either by ID or by filter.  Both can be specified simulta
 #### Delete one entity by ID
 
 To delete a single point, give its ID as the `id` parameter:
-```
+```yaml
 ---
 action: delete
 id: my.unwanted.point
@@ -146,7 +146,7 @@ id: my.unwanted.point
 #### Delete many entities by ID
 
 For quick deletion of multiple entities, list them as `ids`:
-```
+```yaml
 ---
 action: delete
 ids:
@@ -159,7 +159,7 @@ ids:
 
 A [Project Haystack filter](https://project-haystack.org/doc/Filters) string can be used to delete entities.
 
-```
+```yaml
 ---
 action: delete
 # The filter string must be given in the Project Haystack filter syntax
@@ -169,7 +169,7 @@ filter: point and equipRef==@my.unwanted and energy
 ```
 
 You can also specify multiple filters with the `filters` argument:
-```
+```yaml
 ---
 action: delete
 filters:
@@ -195,7 +195,7 @@ Tags can be deleted by listing them in `delete_tags`.
 
 #### Update one entity by ID
 
-```
+```yaml
 ---
 action: update
 id: ${FQN_OR_UUID}
@@ -207,7 +207,7 @@ tags:
 
 Or to delete tags from that entity:
 
-```
+```yaml
 ---
 action: update
 id: ${FQN_OR_UUID}
@@ -219,7 +219,7 @@ delete_tags:
 
 #### Update many by ID
 
-```
+```yaml
 ---
 action: update
 ids:
@@ -234,7 +234,7 @@ tags:
 
 Or to delete tags from that entity:
 
-```
+```yaml
 ---
 action: update
 ids:
@@ -251,7 +251,7 @@ delete_tags:
 
 A single [filter](https://project-haystack.org/doc/Filters):
 
-```
+```yaml
 ---
 action: update
 filter: point and energy
@@ -262,7 +262,7 @@ tags:
 ```
 
 Or multiple filters:
-```
+```yaml
 ---
 action: update
 filters:
@@ -293,7 +293,7 @@ Tags can be deleted by listing them in `delete_tags`.
 
 #### Set one entity by ID
 
-```
+```yaml
 ---
 action: set
 id: ${FQN_OR_UUID}
@@ -305,7 +305,7 @@ tags:
 
 Or to delete tags from that entity:
 
-```
+```yaml
 ---
 action: set
 id: ${FQN_OR_UUID}
@@ -317,7 +317,7 @@ delete_tags:
 
 #### Set many by ID
 
-```
+```yaml
 ---
 action: set
 ids:
@@ -332,7 +332,7 @@ tags:
 
 Or to delete tags from that entity:
 
-```
+```yaml
 ---
 action: set
 ids:
@@ -349,7 +349,7 @@ delete_tags:
 
 A single [filter](https://project-haystack.org/doc/Filters):
 
-```
+```yaml
 ---
 action: set
 filter: point and energy
@@ -360,7 +360,7 @@ tags:
 ```
 
 Or multiple filters:
-```
+```yaml
 ---
 action: set
 filters:
@@ -376,7 +376,7 @@ tags:
 
 ### Creating a site, spaces, equipment and points
 
-```
+```yaml
 action: create_or_set
 id: ws
 tags:
@@ -469,7 +469,7 @@ tags:
 
 Here, we don't know the ID, but we know some other attribute for that entity which happens to also be unique:
 
-```
+```yaml
 action: update
 filter: wshEui64=="00124b0011f47b54"
 tags:

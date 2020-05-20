@@ -56,7 +56,7 @@ When removing points only (i.e. not closing the watch), the watchId remains unch
 
 ### Close watch
 - **Request:**
-  ```
+  ```json
   POST /api/watchUnsub HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -78,7 +78,7 @@ When removing points only (i.e. not closing the watch), the watchId remains unch
   }
   ```
 - **Response:**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"
@@ -93,7 +93,7 @@ When removing points only (i.e. not closing the watch), the watchId remains unch
   ```
 ### Append to watch
 - **Request:**
-  ```
+  ```json
   POST /api/watchUnsub HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -119,7 +119,7 @@ When removing points only (i.e. not closing the watch), the watchId remains unch
   ```
 
 - **Response:**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"

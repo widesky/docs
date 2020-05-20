@@ -19,8 +19,8 @@ Make sure you have already installed [WideSky Editor](../installation/). You wil
 
 Create a directory for the project:
 ```bash
-$ mkdir editortest
-$ cd editortest
+mkdir editortest;
+cd editortest;
 ```
 
 ### Step 2: Create a CSV file containing new entity definitions
@@ -38,13 +38,13 @@ id,delete,dis,site,equip,point,siteRef,equipRef,name
 Use the `load` command and specify `--csv-in` to load in the new CSV file and create the entities in WideSky.
 
 ```bash
-$ widesky-editor \
-        --uri <URI> \
-        --user <USERNAME> \
-        --password "<PASSWORD>" \
-        --client-id "<CLIENT_ID>" \
-        --client-secret "<CLIENT_SECRET>" \
-    load --csv-in testModel.csv
+widesky-editor \
+      --uri <URI> \
+      --user <USERNAME> \
+      --password "<PASSWORD>" \
+      --client-id "<CLIENT_ID>" \
+      --client-secret "<CLIENT_SECRET>" \
+  load --csv-in testModel.csv;
 ```
 
 You should see output similar to the following:
@@ -69,7 +69,7 @@ $ widesky-editor --output testEntities.csv \
         --client-id "<CLIENT_ID>" \
         --client-secret "<CLIENT_SECRET>" \
     dump \
-        --filter 'siteRef==@editorTestSite or id==@editorTestSite'
+        --filter 'siteRef==@editorTestSite or id==@editorTestSite';
 ```
 You should see the following response:
 
@@ -98,7 +98,7 @@ $ widesky-editor \
         --password "<PASSWORD>" \
         --client-id "<CLIENT_ID>" \
         --client-secret "<CLIENT_SECRET>" \
-    load --csv-in testEntities.csv
+    load --csv-in testEntities.csv;
 ```
     You should see the following response:
 ```bash
@@ -156,13 +156,13 @@ tags:
 2. Load the file again with the command:
 
 ```bash
-$ widesky-editor \
-        --uri <URI> \
-        --user <USERNAME> \
-        --password "<PASSWORD>" \
-        --client-id "<CLIENT_ID>" \
-        --client-secret "<CLIENT_SECRET>" \
-    load --csv-in testEntities.csv
+widesky-editor \
+      --uri <URI> \
+      --user <USERNAME> \
+      --password "<PASSWORD>" \
+      --client-id "<CLIENT_ID>" \
+      --client-secret "<CLIENT_SECRET>" \
+  load --csv-in testEntities.csv;
 ```
 You should see the following response:
 
