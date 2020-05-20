@@ -59,7 +59,7 @@ In cases where the time zone is influenced by Daylight Savings Time, the UTC off
 ### Single point
 
 - **Request:**
-  ```
+  ```json
   POST /api/hisWrite HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -92,7 +92,7 @@ In cases where the time zone is influenced by Daylight Savings Time, the UTC off
   }
   ```
 - **Response:**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"
@@ -108,7 +108,7 @@ In cases where the time zone is influenced by Daylight Savings Time, the UTC off
 
 ### Multiple points
 **Request:**
-  ```
+  ```json
   POST /api/hisWrite HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -148,7 +148,7 @@ In cases where the time zone is influenced by Daylight Savings Time, the UTC off
   ```
 
 - **Response:**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"

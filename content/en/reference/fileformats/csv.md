@@ -81,7 +81,7 @@ The "name" of each entity is taken from the `ID` column: the ID is split on the 
 |`mySite.myEquip`||`s:A piece of equipment in the site`||`r:mySite`|`m:`|||
 |`mySite.myEquip.myPoint`||`s:A point on the equipment`||`r:mySite`||`r:mySite.myEquip`|`m:`|
 
-```
+```text
 "ID","Delete","dis","site","siteRef","equip","equipRef","point"
 "mySite","","s:A new WideSky site","m:","","","",""
 "mySite.myEquip","","s:A piece of equipment in the site","","r:mySite","m:","",""
@@ -102,7 +102,7 @@ _Any_ non-empty text value in column B (including `no` or `false`) is treated as
 |`mySite.myEquip`|`X`|`s:A piece of equipment in the site`||`r:mySite`|`m:`|||
 |`mySite`|`X`|`s:A new WideSky site`|`m:`|||||
 
-```
+```text
 "ID","Delete","dis","site","siteRef","equip","equipRef","point"
 "mySite.myEquip.myPoint","X","s:A point on the equipment","","r:mySite","","r:mySite.myEquip","m:"
 "mySite.myEquip","X","s:A piece of equipment in the site","","r:mySite","m:","",""
@@ -124,7 +124,7 @@ In this example, we delete two entities (which were dumped by `widesky-editor`),
 |`wssyd.incomer`||`s:"Main Incomer"`||`r:wssyd`|`m:`|||
 |`wssyd.incomer.kwhImport`||`s:"kWh import"`||`r:wssyd`||`r:wssyd.incomer`|`m:`|
 
-```
+```text
 "ID","Delete","dis","site","siteRef","equip","equipRef","point"
 "c5ca843c-d294-4fd9-88ff-e839192aff15","X","s:kWh Import","","r:2e78589c-a34d-4907-8d95-ee362bc7d56d Milton Office","","r:44ea0813-43d9-460f-a700-591ff59dc31e Server Room Meter #1","m:"
 "44ea0813-43d9-460f-a700-591ff59dc31e","X","s:Server Room Meter #1","","r:2e78589c-a34d-4907-8d95-ee362bc7d56d Milton Office","m:","",""

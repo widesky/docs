@@ -9,7 +9,7 @@ description: >
 
 ## Details
 
-The traditional Project Haystack approach for real-time control is to use the [`watchPoll`](../watchPoll) end-point, however this may lead to a poor user experience in some circumstances.  WideSky provides a websocket-based end-point which clients can subscribe to for receiving update notifications.  Clients are free to use either, or both methods for receiving updates as they see fit.
+The traditional Project Haystack approach for real-time control is to use the [`watchPoll`](../ops/watchpoll) end-point, however this may lead to a poor user experience in some circumstances.  WideSky provides a websocket-based end-point which clients can subscribe to for receiving update notifications.  Clients are free to use either, or both methods for receiving updates as they see fit.
 
 WideSky uses [`socket.io`](https://socket.io/) as a websocket abstraction layer.
 
@@ -17,7 +17,7 @@ WideSky uses [`socket.io`](https://socket.io/) as a websocket abstraction layer.
 
 **URL:** `https://example.on.widesky.cloud/${WATCH_ID}?Authorization=${ACCESS_TOKEN}`
 
-where `${WATCH_ID}` is the ID of a Watch object created using [`watchSub`](../watchSub) and `${ACCESS_TOKEN}` is the access token you use in regular requests (without the `Bearer ` prefix).
+where `${WATCH_ID}` is the ID of a Watch object created using [`watchSub`](../ops/watchsub) and `${ACCESS_TOKEN}` is the access token you use in regular requests (without the `Bearer ` prefix).
 
 ### Emitted Events
 

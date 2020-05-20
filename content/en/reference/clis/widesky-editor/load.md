@@ -10,7 +10,7 @@ description: >
 
 ## Usage reference
 
-```
+```bash
 widesky-editor [-h] [--quiet] [--debug] [--log LOG] [--http-debug]
                [--uri URI] [--tls-verify TLS_VERIFY]
                [--username USERNAME] [--password PASSWORD]

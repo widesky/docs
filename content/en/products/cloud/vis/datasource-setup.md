@@ -21,7 +21,7 @@ Grafana requires a configured data source before building dashboards. To configu
 |------|-----------|
 |*Name*|The data source name|
 |*Default*|Default data source means that it is pre-selected for new panels|
-|*URL*|The URL of your WideSky, e.g. https://lab.on.widesky.cloud/widesky |
+|*URL*|The URL of your WideSky, e.g. `https://lab.on.widesky.cloud/widesky` |
 |*Access*|Server *(recommended)* or Browser|
 |*Client id*|Your WideSky account Client id|
 |*Client Secret*|Your WideSky account Client Secret|

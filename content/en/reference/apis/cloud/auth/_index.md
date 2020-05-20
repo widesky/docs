@@ -74,16 +74,16 @@ Authorization: Basic bXlDb29sQXBwOnBhc3N3b3JkMTIzNA==
 
 Some HTTP clients will do this for you if you tell them to use [HTTP Basic authentication](https://tools.ietf.org/html/rfc2617#section-2) and specify `clientId` for the `username` field and `clientSecret` for the `password`, e.g. in [`curl`](https://curl.haxx.se/):
 
-```
-$ curl -u myCoolApp:password1234 \
-       -H "Accept: application/json" \
-       -H "Content-Type: application/json" \
-       -XPOST -d '{… see examples below …}' \
-       https://example.on.widesky.cloud/widesky/oauth2/token
+```bash
+curl -u myCoolApp:password1234 \
+     -H "Accept: application/json" \
+     -H "Content-Type: application/json" \
+     -XPOST -d '{… see examples below …}' \
+     https://example.on.widesky.cloud/widesky/oauth2/token
 ```
 
 **Request (access token):**
-```
+```json
 POST /oauth2/token HTTP/1.1
 Host: example.on.widesky.cloud
 Authorization: Basic <base64 encoded string of clientId and clientSecret>
@@ -98,7 +98,7 @@ Content-Type: application/json
 ```
 
 **Request (refresh token):**
-```
+```json
 POST /oauth2/token HTTP/1.1
 Host: example.on.widesky.cloud
 Authorization: Basic <base64 encoded string of clientId and clientSecret>

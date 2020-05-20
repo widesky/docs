@@ -27,7 +27,7 @@ End users normally are not granted privileges for doing [`update`](../update) re
 ## Example
 
 - **Request**
-  ```
+  ```json
   POST /api/updatePassword HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -40,6 +40,6 @@ End users normally are not granted privileges for doing [`update`](../update) re
   ```
 
 - **Response**
-  ```
+  ```text
   Password updated.
   ```

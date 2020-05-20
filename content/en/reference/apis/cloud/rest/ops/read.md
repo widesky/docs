@@ -39,7 +39,7 @@ description: >
 ### Read by filter
 
 - **Request**
-  ```
+  ```json
   POST /api/read HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -63,7 +63,7 @@ description: >
   }
   ```
 - **Response**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"
@@ -99,7 +99,7 @@ description: >
 
 ### Read by id, real-time point
 - **Request**
-  ```
+  ```json
   POST /api/read HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -123,7 +123,7 @@ description: >
   }
   ```
 - **Response**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"
@@ -189,7 +189,7 @@ description: >
   ```
 ### Read by fully-qualified name, real-time point
 - **Request**
-  ```
+  ```json
   POST /api/read HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -213,7 +213,7 @@ description: >
   }
   ```
 - **Response**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"
@@ -280,7 +280,7 @@ description: >
 
 ### Tag value look up by regular expression
 - **Request**
-  ```
+  ```json
   POST /api/read HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -305,7 +305,7 @@ description: >
   ```
 - **Response**
 
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"

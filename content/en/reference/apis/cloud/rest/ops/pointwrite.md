@@ -58,7 +58,7 @@ The `pointWrite` operation is used to write a new value, or view the last writte
 ### Read last written value
 
 - **Request:**
-  ```
+  ```json
   POST /api/pointWrite HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -82,7 +82,7 @@ The `pointWrite` operation is used to write a new value, or view the last writte
   }
   ```
 - **Response:**
-  ```
+  ```json
   {
    "meta": {
     "ver": "2.0"
@@ -179,7 +179,7 @@ The `pointWrite` operation is used to write a new value, or view the last writte
 ### Write a new value
 
 - **Request:**
-  ```
+  ```json
   POST /api/pointWrite HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -216,7 +216,7 @@ The `pointWrite` operation is used to write a new value, or view the last writte
   ```
 
 - **Response:**
-  ```
+  ```json
   {
    "meta": {
     "ver": "2.0"

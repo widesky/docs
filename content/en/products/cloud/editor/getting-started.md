@@ -19,8 +19,8 @@ Make sure you have already installed [WideSky Editor](../installation/). You wil
 
 Create a directory for the project:
 ```bash
-$ mkdir editortest
-$ cd editortest
+mkdir editortest
+cd editortest
 ```
 
 ### Step 2: Create a CSV file containing new entity definitions
@@ -38,18 +38,18 @@ id,delete,dis,site,equip,point,siteRef,equipRef,name
 Use the `load` command and specify `--csv-in` to load in the new CSV file and create the entities in WideSky.
 
 ```bash
-$ widesky-editor \
-        --uri <URI> \
-        --user <USERNAME> \
-        --password "<PASSWORD>" \
-        --client-id "<CLIENT_ID>" \
-        --client-secret "<CLIENT_SECRET>" \
-    load --csv-in testModel.csv
+widesky-editor \
+      --uri <URI> \
+      --user <USERNAME> \
+      --password "<PASSWORD>" \
+      --client-id "<CLIENT_ID>" \
+      --client-secret "<CLIENT_SECRET>" \
+  load --csv-in testModel.csv
 ```
 
 You should see output similar to the following:
 
-```bash
+```text
 INFO:root:Read from <open file 'test2.csv', mode 'r' at 0x7f43485fa390>
 INFO:root:Action create Changed: ce1e2a7e-4afc-11ea-85d5-0242ac120003
 INFO:root:Action create Changed: ce344476-4afc-11ea-85d6-0242ac120003
@@ -73,7 +73,7 @@ $ widesky-editor --output testEntities.csv \
 ```
 You should see the following response:
 
-```bash
+```text
 INFO:root:Searching: 'siteRef==@editorTestSite or id==@editorTestSite'
 INFO:root:Found 3
 ```
@@ -101,7 +101,7 @@ $ widesky-editor \
     load --csv-in testEntities.csv
 ```
     You should see the following response:
-```bash
+```text
 INFO:root:Read from <open file 'dump.csv', mode 'r' at 0x7f848f2bc390>
 WARNING:root:fqname is a read-only tag, ignoring
 INFO:root:For ce344476-4afc-11ea-85d6-0242ac120003: setting {}, deleting set([])
@@ -156,17 +156,17 @@ tags:
 2. Load the file again with the command:
 
 ```bash
-$ widesky-editor \
-        --uri <URI> \
-        --user <USERNAME> \
-        --password "<PASSWORD>" \
-        --client-id "<CLIENT_ID>" \
-        --client-secret "<CLIENT_SECRET>" \
-    load --csv-in testEntities.csv
+widesky-editor \
+      --uri <URI> \
+      --user <USERNAME> \
+      --password "<PASSWORD>" \
+      --client-id "<CLIENT_ID>" \
+      --client-secret "<CLIENT_SECRET>" \
+  load --csv-in testEntities.csv
 ```
 You should see the following response:
 
-```bash
+```text
 INFO:root:Read from <open file 'dump.csv', mode 'r' at 0x7fedfebfc390>
 INFO:root:Deleting IDs: ce344476-4afc-11ea-85d6-0242ac120003
 ...

@@ -26,7 +26,7 @@ An empty grid is one that carries no data.  Typically, there is a "dummy" column
 
 In JSON, these look like this:
 
-  ```
+  ```json
   {
       "meta": {
           "ver": "2.0"
@@ -40,7 +40,7 @@ In JSON, these look like this:
 
 or as ZINC:
 
-```
+```text
 ver:"2.0"
 empty
 
@@ -58,7 +58,7 @@ Exceptions in a Project Haystack server are reported by way of an error grid.  T
 
 In JSON, an error grid may look like this:
 
-```
+```json
 {
     "meta": {
         "ver":"2.0",
@@ -74,7 +74,7 @@ In JSON, an error grid may look like this:
 ```
 
 Or as ZINC:
-```
+```text
 ver:"2.0" dis:"An Example Error Message" err errTrace:"Stack trace of error"
 empty
 

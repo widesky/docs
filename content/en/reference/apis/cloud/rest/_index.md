@@ -16,8 +16,7 @@ The WideSky Cloud REST API exposes a range of functionality to query the asset m
 A haystack REST server implements a set of operations (or "ops"). Standard operations are defined to query WideSky, setup subscriptions, or read/write history time series data. Both requests and responses are modelled as grids. Grids are encoded using either ZINC or JSON serialization formats.
 
 ### Serialization
-All data is exchanged in Project Haystck [grids](./serialization) in either ZINC or JSON format.
-
+All data is exchanged in Project Haystck [grids](./grids) in either ZINC or JSON format.
 ### Ops Summary
 
 A summary of the currently support operations is listed below:

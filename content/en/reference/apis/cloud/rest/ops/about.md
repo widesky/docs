@@ -35,14 +35,14 @@ description: Queries basic information about the server.
 ---
 ### Example:
 - **Request:**
-  ```
+  ```json
     GET /api/about HTTP/1.1
     Host: example.on.widesky.cloud
     Authorization: Bearer <authToken>
     Accept: application/json
   ```
 - **Response:**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"

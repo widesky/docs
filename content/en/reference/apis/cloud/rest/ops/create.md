@@ -37,7 +37,7 @@ If an input row specified an id, then that value will be used to identify the en
 ### Specifying name
 
 - **Request:**
-  ```
+  ```json
   POST /api/createRec HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -68,8 +68,9 @@ If an input row specified an id, then that value will be used to identify the en
     ]
   }
   ```
+
 - **Response:**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"
@@ -102,7 +103,7 @@ If an input row specified an id, then that value will be used to identify the en
 ### Specifying id
 
 - **Request:**
-  ```
+  ```json
   POST /api/createRec HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -138,7 +139,7 @@ If an input row specified an id, then that value will be used to identify the en
   }
   ```
 - **Response:**
-  ```
+  ```json
   {
     "meta": {
       "ver": "2.0"
@@ -170,7 +171,7 @@ If an input row specified an id, then that value will be used to identify the en
 ### Specifying name and id
 
 - **Request:**
-  ```
+  ```json
   POST /api/createRec HTTP/1.1
   Host: example.on.widesky.cloud
   Authorization: Bearer <authToken>
@@ -210,7 +211,7 @@ If an input row specified an id, then that value will be used to identify the en
   }
   ```
 - **Response:**
-  ```
+  ```json
   {
   "meta": {
     "ver": "2.0"
