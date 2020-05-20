@@ -79,7 +79,7 @@ curl -u myCoolApp:password1234 \
      -H "Accept: application/json" \
      -H "Content-Type: application/json" \
      -XPOST -d '{… see examples below …}' \
-     https://example.on.widesky.cloud/widesky/oauth2/token;
+     https://example.on.widesky.cloud/widesky/oauth2/token
 ```
 
 **Request (access token):**

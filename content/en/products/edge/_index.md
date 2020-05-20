@@ -14,7 +14,7 @@ WideSky Edge is a suite of software for creating reliable operational data solut
 - Distributed architecture that moves intelligence closer to the data source allowing for increased reliability.
 
 ## Flow programming
-Based on the open source project [Node-RED](https://nodered.org/), you can easily create robust IoT solutions in a friendly browser-based flow editor. We have built WideSky specific nodes [nodes](./nodes/) for protocol conversion, data capture, analytics and more.
+Based on the open source project [Node-RED](https://nodered.org/), you can easily create robust IoT solutions in a friendly browser-based flow editor. We have built WideSky specific [nodes](./nodes/) for protocol conversion, data capture, analytics and more.
 
 ## Distributed WideSky Architecture
 The WideSky Edge architecture was designed to ensure your IoT solutions are reliable, efficient and continue to operate during extended offline periods. You can distribute WideSky data processing workloads and time series data capture. To ensure data reliability and local processing can continue in the event of extended communications outages, it:
