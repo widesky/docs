@@ -18,7 +18,7 @@ You can run Editor on macOS, Windows, and 64-bit Linux.
 {{% alert title="Tip"  color="primary" %}}
 For Windows users:
 + Use [this guide](https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly) to assist your installation.
-+ When dumping and loading files from your system, the files locations need to be accessable by docker, e.g. your working path needs to start with `\c` or `\d` see [this big](https://github.com/docker/for-win/issues/2151) for details.
++ When dumping and loading files from your system, the files locations need to be accessable by docker, e.g. your working path needs to start with `/c` or `/d` see [this bug](https://github.com/docker/for-win/issues/2151) for details.
 {{% /alert %}}
 
 
@@ -35,7 +35,7 @@ sudo chmod +x /usr/local/bin/widesky-editor
 To test WideSky editor:
 
 ```bash
-$ widesky-editor --help
+widesky-editor --help
 ```
 {{% alert title="Note"  color="primary" %}} The first run may take longer than normal as the Docker container downloads.
 {{% /alert %}}
@@ -84,7 +84,7 @@ optional arguments:
 To upgrade you need to pull the latest container. Run the following command:
 
 ```bash
-$ docker pull wideskycloud/editor
+docker pull wideskycloud/editor
 ```
 
 
@@ -93,6 +93,6 @@ $ docker pull wideskycloud/editor
 To uninstall WideSky Editor:
 
 ```bash
-$ sudo rm /usr/local/bin/widesky-editor
-$ docker image rm wideskycloud/editor
+sudo rm /usr/local/bin/widesky-editor
+docker image rm wideskycloud/editor
 ```

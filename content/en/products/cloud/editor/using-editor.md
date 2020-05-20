@@ -74,7 +74,7 @@ Each command can have the following:
 |(Optional) *tags*|A block of tags to be assigned, edited or deleted|
 |(Optional) *filter* OR *id*| A [Project Haystack filter](https://project-haystack.org/doc/Filters) or entity id|
 
-{{% alert title="Tip"  color="info" %}}
+{{% alert title="Tip"  color="primary" %}}
 The id can ether be a UUID or Fully-Qualified Name.
 {{% /alert %}}
 
@@ -95,7 +95,7 @@ List of action types:
 
 
 ##### Delete
-```
+```yaml
 action: delete
 id: ce1e2a7e-4afc-11ea-85d5-0242ac120003
 ```
@@ -108,7 +108,7 @@ Specifying name
 
 
 Explicit id
-```
+```yaml
 ---
 action: create_or_update
 id: ea99fab6-4afc-11ea-a891-0242ac120003
@@ -127,7 +127,7 @@ A new site entitiy will be created each time this command is run
 
 By Filter:
 Add the `wshToEnrol` tag to all entities that have `wshEui64`
-```
+```yaml
 action: update
 filter: wshEui64
 tags:
