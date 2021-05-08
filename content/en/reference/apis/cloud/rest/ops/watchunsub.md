@@ -91,7 +91,7 @@ When removing points only (i.e. not closing the watch), the watchId remains unch
     "rows": []
   }
   ```
-### Append to watch
+### Remove from watch
 - **Request:**
   ```json
   POST /api/watchUnsub HTTP/1.1
